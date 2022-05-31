@@ -11,21 +11,29 @@ public class TitleManager : Singleton<TitleManager>
     private Image title;
     [SerializeField]
     private Button gameStart;
-    
+
     public bool selectStage;
-    
+
 
     private void Start()
     {
-        
+        MoveTitle();
+        GoSelectStage();
     }
-    public void GoSelectStage()
+    private void GoSelectStage()
     {
-        
+        gameStart.onClick.AddListener(() =>
+        {
+            TitleMove();
+        });
     }
-    private void titleMove()
+    private void MoveTitle()
     {
-        title.transform.DOMoveY(1000, 1.5f).SetEase(Ease.InBack);
+        title.transform.DOLocalMoveY(200, 1f).SetRelative().SetLoops(-1,LoopType.Yoyo);
+    }
+    private void TitleMove()
+    {
+        title.transform.DOLocalMoveY(1000, 1.5f).SetEase(Ease.InBack);
     }
 
 }
