@@ -12,8 +12,11 @@ public class TitleManager : Singleton<TitleManager>
     [SerializeField]
     private Button gameStart;
 
-    public bool selectStage;
+    private Tween titleTween;
+    private Tween startTween;
 
+    public bool selectStage;
+    private bool isStart = true;
 
     private void Start()
     {
@@ -29,12 +32,14 @@ public class TitleManager : Singleton<TitleManager>
     }
     private void MoveTitle()
     {
-        title.transform.DOLocalMoveY(200, 1f).SetRelative().SetLoops(-1,LoopType.Yoyo);
+        titleTween = title.transform.DOLocalMoveY(100, 2f).SetLoops(-1,LoopType.Yoyo);
     }
     private void TitleMove()
     {
+        titleTween.Pause();
         title.transform.DOLocalMoveY(1000, 1.5f).SetEase(Ease.InBack);
-        gameStart.transform.DOLocalMoveY
+        gameStart.transform.DOLocalMoveY(-1000, 1.5f).SetEase(Ease.InBack);
+        isStart = false;
     }
 
 }
