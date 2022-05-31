@@ -34,6 +34,7 @@ public class TitleManager : Singleton<TitleManager>
     private void TitleMove()
     {
         title.transform.DOLocalMoveY(1000, 1.5f).SetEase(Ease.InBack);
+        gameStart.transform.DOLocalMoveY
     }
 
 }
