@@ -14,10 +14,7 @@ public abstract class StageManager : MonoBehaviour
     private float scope = 0.1f;
     private void Start()
     {
-        foreach (var guides in guideCountry)
-        {
-            guides.GetComponent<Image>().alphaHitTestMinimumThreshold = scope;
-        }
+       
     }
     protected abstract void OnMouseEnter();
     protected abstract void OnMouseExit();
