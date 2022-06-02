@@ -1,16 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BogOverlay : StageManager
 {
-    protected override void OnMouseEnter()
-    {
-        
-    }
-
-    protected override void OnMouseExit()
-    {
-
-    }
+    private BoxCollider2D bogOverlay;
 }
