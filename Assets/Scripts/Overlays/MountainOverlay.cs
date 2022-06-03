@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class MountainOverlay : StageManager , IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField]
-    private SpriteRenderer mountainOverlay;
+    private Button mountainOverlay;
 
     private void OnMouseEnter()
     {
