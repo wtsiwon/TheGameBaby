@@ -10,7 +10,7 @@ public class TitleManager : Singleton<TitleManager>
 	[SerializeField]
 	private Image title;
 	[SerializeField]
-	private Button backGroundButton;
+	private Button backGroundButton;//
 
 	private Color fadeColor;
 	private Image fade;

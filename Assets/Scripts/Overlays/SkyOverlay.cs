@@ -2,20 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 
-public class MountainOverlay : StageManager
+public class SkyOverLay : StageManager
 {
     [SerializeField]
-    private Button mountainOverlay;
-
+    private Button skyOverlay;
     protected override void OnMouseEnter()
     {
-        mountainOverlay.gameObject.SetActive(true);
+        skyOverlay.gameObject.SetActive(true);
     }
-
     protected override void OnMouseExit()
     {
-        mountainOverlay.gameObject.SetActive(false);
+        skyOverlay.gameObject.SetActive(false);
     }
 }
