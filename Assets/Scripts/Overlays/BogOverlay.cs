@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class BogOverlay : StageManager
 {
-    private BoxCollider2D bogOverlay;
+    [SerializeField]
+    private Button bogOverlay;
 
     protected override void OnMouseEnter()
     {
-        throw new System.NotImplementedException();
+        bogOverlay.gameObject.SetActive(true);
     }
 
     protected override void OnMouseExit()
     {
-        throw new System.NotImplementedException();
+        bogOverlay.gameObject.SetActive(false);
     }
 }

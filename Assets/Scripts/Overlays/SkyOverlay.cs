@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SkyOverLay : StageManager
+public class SkyOverlay : StageManager
 {
     [SerializeField]
     private Button skyOverlay;
