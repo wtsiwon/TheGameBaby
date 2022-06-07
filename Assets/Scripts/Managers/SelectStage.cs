@@ -20,7 +20,30 @@ public class SelectStage : MonoBehaviour
         {
             stageBtn[i].onClick.AddListener(() =>
             {
-                SceneManager.LoadScene(i);
+                switch (i)
+                {
+                    case 0:
+                        SceneManager.LoadScene("Stage 0");
+                        break;
+                    case 1:
+                        SceneManager.LoadScene("Stage 1");
+                        break;
+                    case 2:
+                        SceneManager.LoadScene("Stage 2");
+                        break;
+                    case 3:
+                        SceneManager.LoadScene("Stage 3");
+                        break;
+                    case 4:
+                        SceneManager.LoadScene("Stage 4");
+                        break;
+                    case 5:
+                        SceneManager.LoadScene("Stage 5");
+                        break;
+                    case 6:
+                        SceneManager.LoadScene("Stage 6");
+                        break;
+                }
             });
         }
     }

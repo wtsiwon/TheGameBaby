@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 248493684}
   - component: {fileID: 248493686}
   - component: {fileID: 248493685}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: f9d0ee9e642fae04ebdd91ecc2560dd8, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -688,9 +688,9 @@ GameObject:
   m_Component:
   - component: {fileID: 358804297}
   - component: {fileID: 358804299}
-  - component: {fileID: 358804298}
   - component: {fileID: 358804300}
-  m_Layer: 0
+  - component: {fileID: 358804298}
+  m_Layer: 1
   m_Name: Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -711,8 +711,8 @@ Transform:
   m_Father: {fileID: 2007659706}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &358804298
-CircleCollider2D:
+--- !u!70 &358804298
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -724,9 +724,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 10
+  m_Offset: {x: -0.21926126, y: 7.530896}
+  m_Size: {x: 8.81253, y: 3.4612432}
+  m_Direction: 1
 --- !u!212 &358804299
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 605004762}
   - component: {fileID: 605004761}
   - component: {fileID: 605004763}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: MountainOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -851,7 +851,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 9110fb9fd1df61b439357f7f8ddb1fbe, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -923,7 +923,7 @@ GameObject:
   - component: {fileID: 663080271}
   - component: {fileID: 663080272}
   - component: {fileID: 663080273}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Mountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1036,7 +1036,7 @@ GameObject:
   - component: {fileID: 725056807}
   - component: {fileID: 725056808}
   - component: {fileID: 725056809}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Bog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1326,6 +1326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleUp: 0
+  Stage: 0000000000
 --- !u!1 &1211166926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,9 +1337,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1211166927}
   - component: {fileID: 1211166929}
-  - component: {fileID: 1211166928}
   - component: {fileID: 1211166930}
-  m_Layer: 0
+  - component: {fileID: 1211166928}
+  m_Layer: 1
   m_Name: Ocean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1359,8 +1360,8 @@ Transform:
   m_Father: {fileID: 2007659706}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1211166928
-CircleCollider2D:
+--- !u!70 &1211166928
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1372,9 +1373,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 6
+  m_Offset: {x: -0.6212379, y: 3.782207}
+  m_Size: {x: 7.2657385, y: 4.378819}
+  m_Direction: 1
 --- !u!212 &1211166929
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1451,13 +1452,13 @@ GameObject:
   - component: {fileID: 1414177918}
   - component: {fileID: 1414177917}
   - component: {fileID: 1414177916}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SkyOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1414177915
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1543,7 +1544,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 01434018acf896c4380dcfb1e6a78261, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1940,7 +1941,7 @@ GameObject:
   - component: {fileID: 1755492549}
   - component: {fileID: 1755492548}
   - component: {fileID: 1755492550}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2054,7 +2055,7 @@ GameObject:
   - component: {fileID: 1809397875}
   - component: {fileID: 1809397874}
   - component: {fileID: 1809397877}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: OceanOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2146,7 +2147,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 4d70ff317fa327d47b5c0d3e03ad56f3, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2572,7 +2573,7 @@ GameObject:
   - component: {fileID: 2143687434}
   - component: {fileID: 2143687433}
   - component: {fileID: 2143687432}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: FieldOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2664,7 +2665,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 939bbf24b819ac64caeb5e49f69a566f, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2692,7 +2693,7 @@ GameObject:
   - component: {fileID: 2143839702}
   - component: {fileID: 2143839701}
   - component: {fileID: 2143839700}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: BogOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2784,7 +2785,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 6fca5c7006fcb2e4d9d64c07eab12c65, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
