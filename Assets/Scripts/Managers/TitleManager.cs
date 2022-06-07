@@ -42,7 +42,7 @@ public class TitleManager : Singleton<TitleManager>
 		fadeColor.a = Mathf.Lerp(fadeColor.a, 0, 1.2f);//서서히 밝아지기
 		Invoke(nameof(FadeDisAble), 1.2f);
 		title.transform.DOLocalMoveY(1000, 1.5f).SetEase(Ease.InBack);
-
+		GameManager.Instance.titleUp = true;
 		//backGroundButton.transform.DOLocalMoveY(-1000, 1.5f).SetEase(Ease.InBack);
 		//isStart = false;
 	}

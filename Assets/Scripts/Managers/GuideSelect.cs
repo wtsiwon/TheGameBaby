@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public abstract class StageManager : MonoBehaviour
+public abstract class GuideSelect : MonoBehaviour
 {
     protected abstract void OnMouseEnter();
     protected abstract void OnMouseExit();
+    
 }
