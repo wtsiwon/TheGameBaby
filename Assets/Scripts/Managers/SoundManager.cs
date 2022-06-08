@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public enum ESoundType
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    BGM,
+    SFX,
+    Narration
+}
+public class SoundManager : SingletonDDOL<SoundManager>
+{
+    [SerializeField]
+    public List<AudioSource> audioSources = new List<AudioSource>();
 
-    // Update is called once per frame
-    void Update()
+    private Dictionary<ESoundType, AudioClip> sounds = new Dictionary<ESoundType, AudioClip>();
+
+    private void Start()
     {
-        
+        foreach (var audio in audioSources)
+        {
+            //Dictionary에 List에 있는 사운드 삽입
+        }
     }
 }
