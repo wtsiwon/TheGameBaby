@@ -40,7 +40,16 @@ public class Word : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,IDragH
     
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (isCorrect == false)
+        {
+            Destroy(instance);
+            
+        }
         if(instance != null && isCorrect == true)
+        {
+
+        }
+       
         instance = null;
     }
 }
