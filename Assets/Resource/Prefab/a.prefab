@@ -117,3 +117,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DragObject: {fileID: 7085945295395792027}
   canvas: {fileID: 0}
+  word: "\u3131"
+  isCorrect: 0

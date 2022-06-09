@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Word : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,IDragHandler
 {
+
     public GameObject DragObject;//드레그 할때 나타날 오브젝트
     private GameObject instance;
     public Canvas canvas;
@@ -45,11 +46,10 @@ public class Word : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,IDragH
             Destroy(instance);
             
         }
-        if(instance != null && isCorrect == true)
+        else if(isCorrect == true)
         {
-
+            GameManager.Instance.isUp = true;
         }
-       
         instance = null;
     }
 }
