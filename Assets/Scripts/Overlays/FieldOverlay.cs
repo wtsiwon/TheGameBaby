@@ -11,11 +11,13 @@ public class FieldOverlay : GuideSelect
     {
         if (GameManager.Instance.titleUp == false) return;
         fieldOverlay.gameObject.SetActive(true);
+        isOver = true;
     }
 
     protected override void OnMouseExit()
     {
         if (GameManager.Instance.titleUp == false) return;
         fieldOverlay.gameObject.SetActive(false);
+        isOver = false;
     }
 }

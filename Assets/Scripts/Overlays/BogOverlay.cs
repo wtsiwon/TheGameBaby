@@ -12,11 +12,13 @@ public class BogOverlay : GuideSelect
     {
         if (GameManager.Instance.titleUp == false) return;
         bogOverlay.gameObject.SetActive(true);
+        isOver = true;
     }
 
     protected override void OnMouseExit()
     {
         if (GameManager.Instance.titleUp == false) return;
         bogOverlay.gameObject.SetActive(false);
+        isOver = false;
     }
 }

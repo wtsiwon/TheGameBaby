@@ -11,10 +11,12 @@ public class SkyOverlay : GuideSelect
     {
         if (GameManager.Instance.titleUp == false) return;
         skyOverlay.gameObject.SetActive(true);
+        isOver = true;
     }
     protected override void OnMouseExit()
     {
         if (GameManager.Instance.titleUp == false) return;
         skyOverlay.gameObject.SetActive(false);
+        isOver = false;
     }
 }

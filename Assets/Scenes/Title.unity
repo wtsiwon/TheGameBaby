@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 3806849}
   - component: {fileID: 3806848}
   - component: {fileID: 3806850}
-  - component: {fileID: 3806852}
   m_Layer: 5
   m_Name: Fade
   m_TagString: Untagged
@@ -244,22 +243,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!58 &3806852
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3806846}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 100
 --- !u!1 &169469320
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,6 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725e6dfbda15c0d46b223455a7d42e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eguideType: 0
   fieldOverlay: {fileID: 2143687432}
 --- !u!1 &605004759
 GameObject:
@@ -921,8 +905,8 @@ GameObject:
   m_Component:
   - component: {fileID: 663080270}
   - component: {fileID: 663080271}
-  - component: {fileID: 663080272}
   - component: {fileID: 663080273}
+  - component: {fileID: 663080272}
   m_Layer: 1
   m_Name: Mountain
   m_TagString: Untagged
@@ -1023,6 +1007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13eeff5eed0f4e43a712d0a21ed16c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eguideType: 4
   mountainOverlay: {fileID: 605004763}
 --- !u!1 &725056805
 GameObject:
@@ -1034,8 +1019,8 @@ GameObject:
   m_Component:
   - component: {fileID: 725056806}
   - component: {fileID: 725056807}
-  - component: {fileID: 725056808}
   - component: {fileID: 725056809}
+  - component: {fileID: 725056808}
   m_Layer: 1
   m_Name: Bog
   m_TagString: Untagged
@@ -1136,6 +1121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1542d3a0deac9f64ab4a34d528abe3bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eguideType: 2
   bogOverlay: {fileID: 2143839700}
 --- !u!1 &903306411
 GameObject:
@@ -1326,7 +1312,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleUp: 0
-  Stage: 0000000000
+  stage: 
+  isUp: 0
+  selectGuide: 0
 --- !u!1 &1211166926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,6 +1427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3b24fb19b46265438c7dc39fed4860c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eguideType: 1
   oceanOverlay: {fileID: 1809397874}
 --- !u!1 &1414177914
 GameObject:
@@ -1603,8 +1592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c0a1f73c746164b8e936634f3546fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStartBtn: {fileID: 0}
-  settingBtn: {fileID: 0}
+  guideButton: []
 --- !u!1 &1495441802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,7 +1793,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1661734592
 GameObject:
@@ -1873,8 +1861,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c0a1f73c746164b8e936634f3546fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStartBtn: {fileID: 0}
-  settingBtn: {fileID: 0}
+  guideButton:
+  - {fileID: 605004763}
+  - {fileID: 2143839700}
+  - {fileID: 2143687432}
+  - {fileID: 1809397874}
+  - {fileID: 1414177916}
 --- !u!4 &1687591134
 Transform:
   m_ObjectHideFlags: 0
@@ -1939,8 +1931,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1755492547}
   - component: {fileID: 1755492549}
-  - component: {fileID: 1755492548}
   - component: {fileID: 1755492550}
+  - component: {fileID: 1755492548}
   m_Layer: 1
   m_Name: Sky
   m_TagString: Untagged
@@ -2041,6 +2033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002b98e10e011e44e844c5f0ecc1c564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eguideType: 3
   skyOverlay: {fileID: 1414177916}
 --- !u!1 &1809397872
 GameObject:
@@ -2054,7 +2047,6 @@ GameObject:
   - component: {fileID: 1809397876}
   - component: {fileID: 1809397875}
   - component: {fileID: 1809397874}
-  - component: {fileID: 1809397877}
   m_Layer: 0
   m_Name: OceanOverlay
   m_TagString: Untagged
@@ -2163,19 +2155,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809397872}
   m_CullTransparentMesh: 1
---- !u!114 &1809397877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809397872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3b24fb19b46265438c7dc39fed4860c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oceanOverlay: {fileID: 1809397874}
 --- !u!1 &1809916014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2251,41 +2230,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809916014}
   m_CullTransparentMesh: 1
---- !u!1 &1811224359
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1811224360}
-  m_Layer: 5
-  m_Name: SelectGuide
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1811224360
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811224359}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 540}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2007659705
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,7 +2263,7 @@ Transform:
   - {fileID: 1211166927}
   - {fileID: 1755492547}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2056417595
 GameObject:

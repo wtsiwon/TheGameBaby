@@ -8,5 +8,6 @@ public class GameManager : Singleton<GameManager>
     public bool titleUp;//Ω√¿€ «‘?
     public List<bool> stage = new List<bool>();
     public bool isUp;
+    public bool selectGuide;
 
 }

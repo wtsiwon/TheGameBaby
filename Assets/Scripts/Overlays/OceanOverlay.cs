@@ -11,10 +11,12 @@ public class OceanOverlay : GuideSelect
     {
         if (GameManager.Instance.titleUp == false) return;
         oceanOverlay.gameObject.SetActive(true);
+        isOver = true;
     }
     protected override void OnMouseExit()
     {
         if (GameManager.Instance.titleUp == false) return;
         oceanOverlay.gameObject.SetActive(false);
+        isOver = false;
     }
 }

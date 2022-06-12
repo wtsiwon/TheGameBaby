@@ -13,11 +13,13 @@ public class MountainOverlay : GuideSelect
     {
         if (GameManager.Instance.titleUp == false) return;
         mountainOverlay.gameObject.SetActive(true);
+        isOver = true;
     }
 
     protected override void OnMouseExit()
     {
         if (GameManager.Instance.titleUp == false) return;
         mountainOverlay.gameObject.SetActive(false);
+        isOver = false;
     }
 }
