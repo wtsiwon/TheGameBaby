@@ -6,19 +6,21 @@ using UnityEngine.UI;
 public class BogOverlay : GuideSelect
 {
     [SerializeField]
-    private Button bogOverlay;
+    private Button bogButton;
 
     protected override void OnMouseEnter()
     {
         if (GameManager.Instance.titleUp == false) return;
-        bogOverlay.gameObject.SetActive(true);
+        base.OnMouseEnter();
+        bogButton.gameObject.SetActive(true);
         isOver = true;
     }
 
     protected override void OnMouseExit()
     {
         if (GameManager.Instance.titleUp == false) return;
-        bogOverlay.gameObject.SetActive(false);
+        base.OnMouseExit();
+        bogButton.gameObject.SetActive(false);
         isOver = false;
     }
 }

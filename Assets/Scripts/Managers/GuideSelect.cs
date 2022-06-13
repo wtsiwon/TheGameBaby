@@ -14,8 +14,16 @@ public enum EguideType
 public abstract class GuideSelect : MonoBehaviour
 {
     [SerializeField]
+    protected SpriteRenderer Overlay;
+    [SerializeField]
     protected EguideType eguideType;
     protected bool isOver;
-    protected abstract void OnMouseEnter();
-    protected abstract void OnMouseExit();
+    protected virtual void OnMouseEnter()
+    {
+        Overlay.gameObject.SetActive(true);
+    }
+    protected virtual void OnMouseExit()
+    {
+        Overlay.gameObject.SetActive(false);
+    }
 }

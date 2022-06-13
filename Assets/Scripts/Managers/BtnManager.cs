@@ -8,14 +8,16 @@ public class BtnManager : SingletonDDOL<BtnManager>
 {
     [SerializeField]
     private Button[] guideButton;
-    private List<bool> isOverlay = new List<bool>();
-
+    
     private void Start()
     {
-        //for (int i = 0; i < guideButton.Length; i++)
-        //{
-        //    isOverlay[i] = guideButton[i].GetComponent<GuideSelect>();
-        //}
+        foreach(var btn in guideButton)
+        {
+            btn.onClick.AddListener(() =>
+            {
+                
+            });
+        }
     }
 
 

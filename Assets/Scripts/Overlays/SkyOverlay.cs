@@ -6,17 +6,19 @@ using UnityEngine.UI;
 public class SkyOverlay : GuideSelect
 {
     [SerializeField]
-    private Button skyOverlay;
+    private Button skyButton;
     protected override void OnMouseEnter()
     {
         if (GameManager.Instance.titleUp == false) return;
-        skyOverlay.gameObject.SetActive(true);
+        base.OnMouseEnter();
+        skyButton.gameObject.SetActive(true);
         isOver = true;
     }
     protected override void OnMouseExit()
     {
         if (GameManager.Instance.titleUp == false) return;
-        skyOverlay.gameObject.SetActive(false);
+        base.OnMouseExit();
+        skyButton.gameObject.SetActive(false);
         isOver = false;
     }
 }

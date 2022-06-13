@@ -7,19 +7,21 @@ using UnityEngine.EventSystems;
 public class MountainOverlay : GuideSelect
 {
     [SerializeField]
-    private Button mountainOverlay;
+    private Button mountainButton;
 
     protected override void OnMouseEnter()
     {
         if (GameManager.Instance.titleUp == false) return;
-        mountainOverlay.gameObject.SetActive(true);
+        base.OnMouseEnter();
+        mountainButton.gameObject.SetActive(true);
         isOver = true;
     }
 
     protected override void OnMouseExit()
     {
         if (GameManager.Instance.titleUp == false) return;
-        mountainOverlay.gameObject.SetActive(false);
+        base.OnMouseExit();
+        mountainButton.gameObject.SetActive(false);
         isOver = false;
     }
 }

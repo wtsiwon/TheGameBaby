@@ -6,17 +6,19 @@ using UnityEngine.UI;
 public class OceanOverlay : GuideSelect
 {
     [SerializeField]
-    private Button oceanOverlay;
+    private Button oceanButton;
     protected override void OnMouseEnter()
     {
         if (GameManager.Instance.titleUp == false) return;
-        oceanOverlay.gameObject.SetActive(true);
+        base.OnMouseEnter();
+        oceanButton.gameObject.SetActive(true);
         isOver = true;
     }
     protected override void OnMouseExit()
     {
         if (GameManager.Instance.titleUp == false) return;
-        oceanOverlay.gameObject.SetActive(false);
+        base.OnMouseExit();
+        oceanButton.gameObject.SetActive(false);
         isOver = false;
     }
 }
