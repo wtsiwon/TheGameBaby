@@ -887,9 +887,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725e6dfbda15c0d46b223455a7d42e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectBtn: []
+  animal: []
   Overlay: {fileID: 1847507343}
   eguideType: 0
-  fieldButton: {fileID: 2143687432}
 --- !u!1 &477541463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,9 +1205,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13eeff5eed0f4e43a712d0a21ed16c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectBtn: []
+  animal: []
   Overlay: {fileID: 477541465}
   eguideType: 4
-  mountainButton: {fileID: 605004763}
 --- !u!1 &725056805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,9 +1321,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1542d3a0deac9f64ab4a34d528abe3bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectBtn: []
+  animal: []
   Overlay: {fileID: 969574255}
   eguideType: 2
-  bogButton: {fileID: 2143839700}
 --- !u!1 &903306411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,9 +1711,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3b24fb19b46265438c7dc39fed4860c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectBtn: []
+  animal: []
   Overlay: {fileID: 202261918}
   eguideType: 1
-  oceanButton: {fileID: 1809397874}
 --- !u!1 &1315387492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,7 +1910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c0a1f73c746164b8e936634f3546fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideButton: []
 --- !u!1 &1495441802
 GameObject:
   m_ObjectHideFlags: 0
@@ -2289,12 +2292,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c0a1f73c746164b8e936634f3546fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideButton:
-  - {fileID: 605004763}
-  - {fileID: 2143839700}
-  - {fileID: 2143687432}
-  - {fileID: 1809397874}
-  - {fileID: 1414177916}
 --- !u!4 &1687591134
 Transform:
   m_ObjectHideFlags: 0
@@ -2461,9 +2458,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002b98e10e011e44e844c5f0ecc1c564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectBtn: []
+  animal: []
   Overlay: {fileID: 1552901941}
   eguideType: 3
-  skyButton: {fileID: 1414177916}
 --- !u!1 &1773225585
 GameObject:
   m_ObjectHideFlags: 0
