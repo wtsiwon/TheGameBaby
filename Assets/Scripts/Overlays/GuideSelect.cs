@@ -16,7 +16,7 @@ public abstract class GuideSelect : MonoBehaviour
     [SerializeField]
     protected Button selectBtn;
     [SerializeField]
-    protected GameObject[] animal = new GameObject[5];
+    protected GameObject[] animal;
     [SerializeField]
     protected SpriteRenderer Overlay;
     [SerializeField]
@@ -59,30 +59,4 @@ public abstract class GuideSelect : MonoBehaviour
         Overlay.gameObject.SetActive(false);
         selectBtn.gameObject.SetActive(false);
     }
-    protected virtual GameObject OnClick(EguideType eguide)
-    {
-        GameObject go = null;
-        if(animals[eguide] == null)
-        {
-            animals.Add(eguide, go);
-            switch (eguide)
-            {
-                case EguideType.Rabbit:
-
-                    break;
-            }
-        }
-        else
-        {
-            switch (eguide)
-            {
-                case EguideType.Rabbit:
-
-                    break;
-            }
-        }
-        
-        return go;
-    }
-    public delegate void Action();
 }

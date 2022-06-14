@@ -887,10 +887,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725e6dfbda15c0d46b223455a7d42e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectBtn: []
+  selectBtn: {fileID: 2143687432}
   animal: []
   Overlay: {fileID: 1847507343}
-  eguideType: 0
+  eguideType: 2
 --- !u!1 &477541463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,10 +1205,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13eeff5eed0f4e43a712d0a21ed16c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectBtn: []
+  selectBtn: {fileID: 605004763}
   animal: []
   Overlay: {fileID: 477541465}
-  eguideType: 4
+  eguideType: 0
 --- !u!1 &725056805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1321,10 +1321,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1542d3a0deac9f64ab4a34d528abe3bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectBtn: []
+  selectBtn: {fileID: 2143839700}
   animal: []
   Overlay: {fileID: 969574255}
-  eguideType: 2
+  eguideType: 1
 --- !u!1 &903306411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,10 +1711,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3b24fb19b46265438c7dc39fed4860c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectBtn: []
+  selectBtn: {fileID: 1809397874}
   animal: []
   Overlay: {fileID: 202261918}
-  eguideType: 1
+  eguideType: 3
 --- !u!1 &1315387492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2458,10 +2458,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002b98e10e011e44e844c5f0ecc1c564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectBtn: []
+  selectBtn: {fileID: 1414177916}
   animal: []
   Overlay: {fileID: 1552901941}
-  eguideType: 3
+  eguideType: 4
 --- !u!1 &1773225585
 GameObject:
   m_ObjectHideFlags: 0
