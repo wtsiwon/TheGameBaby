@@ -29,8 +29,8 @@ public class SoundManager : SingletonDDOL<SoundManager>
     [SerializeField]
     private List<AudioClip> SFX = new List<AudioClip>();
 
-
     private Dictionary<ESoundType, List<AudioClip>> sounds = new Dictionary<ESoundType, List<AudioClip>>();
+    private Dictionary<string, List<AudioClip>> soundclip = new Dictionary<string, List<AudioClip>>();
 
     private void Start()
     {
@@ -42,6 +42,12 @@ public class SoundManager : SingletonDDOL<SoundManager>
         {
             sounds[ESoundType.SFX].Add(sound);
         }
+    }
+    public AudioClip GetAudio(ESoundType soundtype, string name)
+    {
+        AudioClip audioClip;
+
+        return null;
     }
     /// <summary>
     /// 나레이션 종류받아서 정하는 함수
