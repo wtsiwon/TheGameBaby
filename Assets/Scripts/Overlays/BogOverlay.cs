@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class BogOverlay : GuideSelect
 {
-
     protected override void OnMouseEnter()
     {
         if (GameManager.Instance.titleUp == false) return;
