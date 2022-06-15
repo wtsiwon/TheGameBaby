@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class Guide : MonoBehaviour
 {
 
-    protected Animation anim;
+    public Animation anim;
     private void Start()
     {
         anim = GetComponent<Animation>();
@@ -16,6 +17,10 @@ public class Guide : MonoBehaviour
     private void Enable()
     {
         anim.Play();
-        transform.DOScale(2, 1.2f);
+    }
+
+    public void GoGuideScene()
+    {
+        SceneManager.LoadScene("GuideSelect");
     }
 }
