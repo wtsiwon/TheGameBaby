@@ -11,7 +11,10 @@ public class FieldOverlay : GuideSelect
         base.OnMouseEnter();
         isOver = true;
     }
-
+    protected override void Active()
+    {
+        
+    }
     protected override void OnMouseExit()
     {
         if (GameManager.Instance.titleUp == false) return;

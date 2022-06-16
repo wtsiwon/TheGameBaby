@@ -7,6 +7,10 @@ using UnityEngine.EventSystems;
 public class MountainOverlay : GuideSelect
 {
     public GameObject cat;
+    protected override void Active()
+    {
+        Instantiate(cat, canvas.transform);
+    }
     protected override void OnMouseEnter()
     {
         if (GameManager.Instance.titleUp == false) return;

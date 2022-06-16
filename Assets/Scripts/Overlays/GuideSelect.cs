@@ -14,9 +14,9 @@ public enum EguideType
 public abstract class GuideSelect : MonoBehaviour
 {
     [SerializeField]
-    protected Button selectBtn;
+    protected Canvas canvas;
     [SerializeField]
-    protected GameObject[] animal;
+    protected Button selectBtn;
     [SerializeField]
     protected SpriteRenderer Overlay;
     [SerializeField]
@@ -26,29 +26,12 @@ public abstract class GuideSelect : MonoBehaviour
     private Dictionary<EguideType, GameObject> animals = new Dictionary<EguideType, GameObject>();
     private void Start()
     {
-        #region AddListener
-        //selectBtn[0].onClick.AddListener(() =>
-        //{
-        //    animals.Add(EguideType.Rabbit, animal[0]);
-        //});
-        //selectBtn[1].onClick.AddListener(() =>
-        //{
-        //    animals.Add(EguideType.Frog, animal[1]);
-        //});
-        //selectBtn[2].onClick.AddListener(() =>
-        //{
-        //    animals.Add(EguideType.Cat, animal[2]);
-        //});
-        //selectBtn[3].onClick.AddListener(() =>
-        //{
-        //    animals.Add(EguideType.Fish, animal[3]);
-        //});
-        //selectBtn[4].onClick.AddListener(() =>
-        //{
-        //    animals.Add(EguideType.Parrot, animal[4]);
-        //});
-        #endregion
+        selectBtn.onClick.AddListener(() =>
+        {
+            Active();
+        });
     }
+    protected abstract void Active();
     protected virtual void OnMouseEnter()
     {
         Overlay.gameObject.SetActive(true);
