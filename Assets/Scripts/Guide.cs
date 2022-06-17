@@ -6,18 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class Guide : MonoBehaviour
 {
-    public Animator anim;
-
-    private void Awake()
-    {
-        
-    }
     private void OnEnable()
     {
-        
+        Invoke(nameof(GoGuideSelect), 2.5f);
     }
-
-    public void GoGuideScene()
+    public void GoGuideSelect()
     {
         SceneManager.LoadScene("SelectGuide");
     }

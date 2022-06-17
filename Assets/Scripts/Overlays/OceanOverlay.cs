@@ -5,10 +5,9 @@ using UnityEngine.UI;
 
 public class OceanOverlay : GuideSelect
 {
-    public GameObject Fish;
-    protected override void Active()
+    protected override void CheckActive()
     {
-        Instantiate(Fish, canvas.transform);
+        Checkboard.gameObject.SetActive(true);
     }
 
     protected override void OnMouseEnter()

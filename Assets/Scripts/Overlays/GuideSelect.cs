@@ -15,23 +15,32 @@ public abstract class GuideSelect : MonoBehaviour
 {
     [SerializeField]
     protected Canvas canvas;
+
     [SerializeField]
     protected Button selectBtn;
+
     [SerializeField]
     protected SpriteRenderer Overlay;
+
     [SerializeField]
     protected EguideType eguideType;
     protected bool isOver;
+
+    [SerializeField]
+    protected GameObject Checkboard;
 
     private Dictionary<EguideType, GameObject> animals = new Dictionary<EguideType, GameObject>();
     private void Start()
     {
         selectBtn.onClick.AddListener(() =>
         {
-            Active();
+            CheckActive();
         });
     }
-    protected abstract void Active();
+    protected abstract void CheckActive();
+    
+        
+        
     protected virtual void OnMouseEnter()
     {
         Overlay.gameObject.SetActive(true);

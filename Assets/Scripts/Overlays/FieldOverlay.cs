@@ -5,17 +5,15 @@ using UnityEngine.UI;
 
 public class FieldOverlay : GuideSelect
 {
-    public GameObject Cat;
-    
     protected override void OnMouseEnter()
     {
         if (GameManager.Instance.titleUp == false) return;
         base.OnMouseEnter();
         isOver = true;
     }
-    protected override void Active()
+    protected override void CheckActive()
     {
-        Instantiate(Cat, canvas.transform);
+        Checkboard.gameObject.SetActive(true);
     }
     protected override void OnMouseExit()
     {

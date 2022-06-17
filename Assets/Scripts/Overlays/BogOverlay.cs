@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class BogOverlay : GuideSelect
 {
-    public GameObject Frog;
-    protected override void Active()
+    
+
+    protected override void CheckActive()
     {
-        Instantiate(Frog,canvas.transform);
+        Checkboard.gameObject.SetActive(true);
     }
+
     protected override void OnMouseEnter()
     {
         if (GameManager.Instance.titleUp == false) return;

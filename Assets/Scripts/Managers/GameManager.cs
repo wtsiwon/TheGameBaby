@@ -10,4 +10,7 @@ public class GameManager : Singleton<GameManager>
     public bool isUp;
     public bool selectGuide;
 
+    [HideInInspector]
+    public GameObject guideAnimal;
+
 }
