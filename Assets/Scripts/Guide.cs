@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class Guide : MonoBehaviour
 {
-    public Animation anim;
-    private void Enable()
+    public Animator anim;
+
+    private void Awake()
     {
-        anim.Play();
+        
+    }
+    private void OnEnable()
+    {
+        
     }
 
     public void GoGuideScene()

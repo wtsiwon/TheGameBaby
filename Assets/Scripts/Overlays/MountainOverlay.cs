@@ -6,10 +6,10 @@ using UnityEngine.EventSystems;
 
 public class MountainOverlay : GuideSelect
 {
-    public GameObject cat;
+    public GameObject Rabbit;
     protected override void Active()
     {
-        Instantiate(cat, canvas.transform);
+        Instantiate(Rabbit, canvas.transform);
     }
     protected override void OnMouseEnter()
     {
