@@ -1987,6 +1987,7 @@ MonoBehaviour:
   stage: 
   isUp: 0
   selectGuide: 0
+  guideAnimal: {fileID: 0}
 --- !u!1001 &1107363238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3112,6 +3113,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1841893102}
     m_Modifications:
+    - target: {fileID: 4348376640944832291, guid: ef0f3e6a3de78014d9ca8f20a08c2ac8, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348376640944832291, guid: ef0f3e6a3de78014d9ca8f20a08c2ac8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3639778593854278885, guid: 0a330f880c7251a4f82603a30da0ad3c, type: 3}
+    - target: {fileID: 4348376641030761597, guid: ef0f3e6a3de78014d9ca8f20a08c2ac8, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348376641030761597, guid: ef0f3e6a3de78014d9ca8f20a08c2ac8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3240900665683145009, guid: 0a330f880c7251a4f82603a30da0ad3c, type: 3}
     - target: {fileID: 4348376642229246361, guid: ef0f3e6a3de78014d9ca8f20a08c2ac8, type: 3}
       propertyPath: m_Name
       value: CheckBoard

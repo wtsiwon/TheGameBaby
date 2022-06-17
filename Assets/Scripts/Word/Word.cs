@@ -44,7 +44,6 @@ public class Word : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,IDragH
         if (isCorrect == false)
         {
             Destroy(instance);
-            
         }
         else if(isCorrect == true)
         {
