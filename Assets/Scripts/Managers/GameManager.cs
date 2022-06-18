@@ -6,7 +6,7 @@ public class GameManager : Singleton<GameManager>
 {
     [HideInInspector]
     public bool titleUp;//Ω√¿€ «‘?
-    public List<bool> stage = new List<bool>();
+    public int Stage;
     public bool isUp;
     public bool selectGuide;
 

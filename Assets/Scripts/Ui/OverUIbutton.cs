@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class UIbutton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class OverUIbutton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public Button overlay;
+    public Image overlay;
     private void OnEnable()
     {
         overlay.enabled = false;
@@ -18,6 +18,6 @@ public class UIbutton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        overlay.gameObject.SetActive(true);
+        overlay.gameObject.SetActive(false);
     }
 }

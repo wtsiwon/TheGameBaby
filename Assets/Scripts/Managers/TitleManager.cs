@@ -9,11 +9,18 @@ public class TitleManager : Singleton<TitleManager>
 	[Header("TitleMenu")]
 	[SerializeField]
 	private Image title;
+
 	[SerializeField]
-	private Button backGroundButton;//
+	private Image title2;
+
+	[SerializeField]
+	private Button backGroundButton;
 
 	private Color fadeColor;
 	private Image fade;
+
+	[SerializeField]
+	private Image textMessage;
 
 	private Tween titleTween;
 	
@@ -39,16 +46,17 @@ public class TitleManager : Singleton<TitleManager>
 	private void TitleMove()//아무대나 클릭시 타이틀 올라가기
 	{
 		titleTween.Pause();
+		textMessage.gameObject.SetActive(false);
 		fadeColor.a = Mathf.Lerp(255, 0, 1.2f);//서서히 밝아지기
 		Invoke(nameof(FadeDisAble), 1.2f);
 		title.transform.DOLocalMoveY(1000, 1.5f).SetEase(Ease.InBack);
+		title2.transform.DOLocalMoveY(200, 1.5f).SetEase(Ease.InBack);
 		GameManager.Instance.titleUp = true;
-		//backGroundButton.transform.DOLocalMoveY(-1000, 1.5f).SetEase(Ease.InBack);
-		//isStart = false;
 	}
     private void FadeDisAble()//색이 다 바뀌었으면 끄기
     {
 		fade.gameObject.SetActive(false);
+		
     }
 
     public void SetResolution()//화면 비율 맞추기
