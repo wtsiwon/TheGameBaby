@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 6726920818263888587}
   - component: {fileID: 6726920818263888596}
   - component: {fileID: 8050764318531392291}
+  - component: {fileID: 5876632955695389379}
   m_Layer: 5
-  m_Name: Parrot
+  m_Name: parrot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,3 +89,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46819f12188ba744092d39b7b180e3df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eguideType: 4
+--- !u!111 &5876632955695389379
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6726920818263888598}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 9ee008c5fda722a4ba7dfa6cdca02ebf, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9ee008c5fda722a4ba7dfa6cdca02ebf, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

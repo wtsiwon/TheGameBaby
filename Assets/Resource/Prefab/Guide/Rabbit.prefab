@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4156941406756859131}
   - component: {fileID: 4156941406756859128}
   - component: {fileID: 2045219011679814752}
+  - component: {fileID: -1928925032964350091}
   m_Layer: 5
   m_Name: Rabbit
   m_TagString: Untagged
@@ -88,3 +89,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46819f12188ba744092d39b7b180e3df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!111 &-1928925032964350091
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4156941406756859110}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 6b0921e4bd9d6be458d4e3abf8ab0d26, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

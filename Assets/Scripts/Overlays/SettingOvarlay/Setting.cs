@@ -6,16 +6,18 @@ using UnityEngine.UI;
 public class Setting : MonoBehaviour
 {
     [SerializeField]
-    private SpriteRenderer settingImg;
+    private SpriteRenderer settingover;
     [SerializeField]
     private Button setting;
+    [SerializeField]
+    private Button maker;
 
     private void OnMouseEnter()
     {
-        settingImg.gameObject.SetActive(true);
+        settingover.gameObject.SetActive(true);
     }
     private void OnMouseExit()
     {
-        settingImg.gameObject.SetActive(false);
+        settingover.gameObject.SetActive(false);
     }
 }

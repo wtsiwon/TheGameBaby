@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5880667693667651208}
   - component: {fileID: -432593116156849441}
   m_Layer: 5
-  m_Name: Cat
+  m_Name: cat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,3 +125,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46819f12188ba744092d39b7b180e3df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eguideType: 1

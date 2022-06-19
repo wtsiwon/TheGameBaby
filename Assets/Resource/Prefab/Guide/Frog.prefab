@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1771771564278134315}
   - component: {fileID: 1771771564278134314}
   - component: {fileID: -7397351877282720790}
+  - component: {fileID: 6945180892291235278}
   m_Layer: 5
   m_Name: Frog
   m_TagString: Untagged
@@ -88,3 +89,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46819f12188ba744092d39b7b180e3df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eguideType: 2
+--- !u!111 &6945180892291235278
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771771564278134312}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 9ee008c5fda722a4ba7dfa6cdca02ebf, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9ee008c5fda722a4ba7dfa6cdca02ebf, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

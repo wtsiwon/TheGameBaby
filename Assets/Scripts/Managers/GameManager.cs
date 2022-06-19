@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : Singleton<GameManager>
+public class GameManager : SingletonDDOL<GameManager>
 {
-    [HideInInspector]
     public bool titleUp;//Ω√¿€ «‘?
     public int Stage;
     public bool isUp;

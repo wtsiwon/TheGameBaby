@@ -10,11 +10,8 @@ public class CheckBoard : MonoBehaviour
     [SerializeField]
     private Button Nextbutton;
     [SerializeField]
-    private Image Nextbuttonimg;
-    [SerializeField]
     private Button Rebutton;
-    [SerializeField]
-    private Image Rebuttonimg;
+    
     [SerializeField]
     private GameObject animal;
     [SerializeField]
@@ -23,12 +20,14 @@ public class CheckBoard : MonoBehaviour
 
     private void OnEnable()
     {
+        var animal_ = animal.GetComponent<Guide>();
         GameManager.Instance.titleUp = false;
         Nextbutton.onClick.AddListener(() =>
         {
             Instantiate(animal, canvas.transform);
-            gameObject.SetActive(false);
             GameManager.Instance.guideAnimal = animal;
+            PlayerPrefs.SetInt(animal_.name,(int)animal_.eguideType);
+            gameObject.SetActive(false);
             Debug.Log("Ȧ");
         });
         Rebutton.onClick.AddListener(() =>

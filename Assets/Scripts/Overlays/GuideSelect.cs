@@ -3,14 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-public enum EguideType
-{
-    Rabbit,
-    Frog,
-    Cat,
-    Fish,
-    Parrot
-}
 public abstract class GuideSelect : MonoBehaviour
 {
     [SerializeField]
@@ -22,18 +14,15 @@ public abstract class GuideSelect : MonoBehaviour
     [SerializeField]
     protected SpriteRenderer Overlay;
 
-    [SerializeField]
-    protected EguideType eguideType;
     protected bool isOver;
 
     [SerializeField]
     protected GameObject Checkboard;
-
-    private Dictionary<EguideType, GameObject> animals = new Dictionary<EguideType, GameObject>();
     private void Start()
     {
         selectBtn.onClick.AddListener(() =>
         {
+            if (GameManager.Instance.titleUp == false) return;
             CheckActive();
         });
     }

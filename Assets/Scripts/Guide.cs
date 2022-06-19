@@ -4,8 +4,18 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
 
+public enum EguideType
+{
+    Rabbit,
+    Cat,
+    Frog,
+    Fish,
+    Parrot
+}
 public class Guide : MonoBehaviour
 {
+    public EguideType eguideType;
+    public string name;
     private void OnEnable()
     {
         Invoke(nameof(GoGuideSelect), 2.5f);
