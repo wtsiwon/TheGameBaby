@@ -5,19 +5,37 @@ using UnityEngine.UI;
 
 public class Setting : MonoBehaviour
 {
+    [Header("버튼들")]
     [SerializeField]
-    private SpriteRenderer settingover;
+    private Button set;//여러가지 버튼들이 있는 버튼
+    //[SerializeField]
+    //private Button setting;//설정
     [SerializeField]
-    private Button setting;
+    private Button maker;//제작자
     [SerializeField]
-    private Button maker;
+    private Button quit;
+    [SerializeField]
+    private Button gotitle;//타이틀로가는 버튼
 
-    private void OnMouseEnter()
+    [SerializeField]
+    private GameObject btns;//돌아가는 버튼
+    Quaternion Base = new Quaternion(0, 0, -180, 0);
+    private void OnEnable()
     {
-        settingover.gameObject.SetActive(true);
+        btns.transform.rotation = Base;
+
+        set.onClick.AddListener(() =>
+        {
+            btns.gameObject.SetActive(true);
+            imgRotate();
+        });
+
     }
-    private void OnMouseExit()
+
+    private void imgRotate()
     {
-        settingover.gameObject.SetActive(false);
+        Quaternion quaternion = new Quaternion(0, 0, 0, 0);
+        Quaternion.Slerp(Base, quaternion, 1f);
     }
+
 }
