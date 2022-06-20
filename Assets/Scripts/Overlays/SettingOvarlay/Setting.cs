@@ -2,40 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class Setting : MonoBehaviour
 {
+    #region buttons
     [Header("버튼들")]
     [SerializeField]
     private Button set;//여러가지 버튼들이 있는 버튼
     //[SerializeField]
     //private Button setting;//설정
     [SerializeField]
-    private Button maker;//제작자
+    private Button makerbtn;//제작자
     [SerializeField]
-    private Button quit;
+    private Button quitbtn;
     [SerializeField]
-    private Button gotitle;//타이틀로가는 버튼
+    private Button gotitlebtn;//타이틀로가는 버튼
+    #endregion
+    [SerializeField]
+    private GameObject btnsobj;//돌아가는 버튼
+    [SerializeField]
+    private GameObject settingboard;
+    [SerializeField]
+    private GameObject titlecheckboard;
+    [SerializeField]
+    private GameObject quitcheckboard;
 
-    [SerializeField]
-    private GameObject btns;//돌아가는 버튼
-    Quaternion Base = new Quaternion(0, 0, -180, 0);
+
     private void OnEnable()
     {
-        btns.transform.rotation = Base;
-
         set.onClick.AddListener(() =>
         {
-            btns.gameObject.SetActive(true);
+            set.gameObject.SetActive(false);
+            btnsobj.gameObject.SetActive(true);
             imgRotate();
         });
-
     }
 
     private void imgRotate()
     {
-        Quaternion quaternion = new Quaternion(0, 0, 0, 0);
-        Quaternion.Slerp(Base, quaternion, 1f);
+        btnsobj.transform.DORotate(new Vector3(0,0,0), 1f).SetEase(Ease.Flash);
     }
 
 }
