@@ -6,11 +6,7 @@ using UnityEngine.EventSystems;
 
 public class OverUIbutton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public Image overlay;
-    private void OnEnable()
-    {
-        overlay.enabled = false;
-    }
+    public Button overlay;
     public void OnPointerEnter(PointerEventData eventData)
     {
         overlay.gameObject.SetActive(true);
