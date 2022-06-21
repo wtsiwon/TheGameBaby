@@ -54,6 +54,8 @@ public class Setting : MonoBehaviour
 
     private void OnEnable()
     {
+        //돌아가면서 설정 메뉴가 나옴
+        #region Onsunset
         set.onClick.AddListener(() =>
         {
             set.gameObject.SetActive(false);
@@ -63,23 +65,31 @@ public class Setting : MonoBehaviour
             quitimg.GetComponentInChildren<OverUIbutton>().overlay.gameObject.SetActive(false);
             imgRotate();
         });
+        #endregion
+        //제작자 소개 
+        #region Credit
         makerbtn.onClick.AddListener(() =>
         {
             makerboard.SetActive(true);
             ismakerboard = true;
         });
+        #endregion
+
+        #region Quit
         quitbtn.onClick.AddListener(() =>
         {
             quitcheckboard.SetActive(true);
             isquitboard = true;
         });
+        #endregion
+        
+        #region soundboard
         soundsetbtn.onClick.AddListener(() =>
         {
             soundsetboard.SetActive(true);
             issoundboard = true;
         });
-
-
+        #endregion
     }
 
     private void imgRotate()

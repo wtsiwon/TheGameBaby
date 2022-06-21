@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public enum ESoundType
 {
@@ -10,11 +11,12 @@ public enum ESoundType
     second,
     third,
     fourth,
-    fifth
+    fifth,
+    End
 }
-public class AudioSouceClass
+public class AudioSourceClass
 {
-    public AudioSource Audiosource;
+    public AudioSource audiosource;
     public float audioVolume;
 }
 public class SoundManager : SingletonDDOL<SoundManager>
@@ -37,83 +39,64 @@ public class SoundManager : SingletonDDOL<SoundManager>
     private List<AudioClip> SFX = new List<AudioClip>();
     #endregion
 
-    //안승준꺼 배껴서 하자
-    private Dictionary<ESoundType, List<AudioClip>> sounds = new Dictionary<ESoundType, List<AudioClip>>();
-    private Dictionary<string, List<AudioClip>> soundclip = new Dictionary<string, List<AudioClip>>();
+    //오디오를 이름별로 분류해 있는 Dictionary
+    private Dictionary<string, AudioClip> audioClips = new Dictionary<string, AudioClip>();
+    //
+    private Dictionary<ESoundType, AudioSourceClass> audioSourceClasses = new Dictionary<ESoundType, AudioSourceClass>();
 
     //시작할때 사운드를 딕셔너리에 추가해줌
-    private void Start()
+    private void Awake()
     {
-        foreach(var sound in BGM)
+        //Resources폴더 안에 Sounds폴더 안에 있는  AudioClip을 전부 가져온다
+        AudioClip[] clips = Resources.LoadAll<AudioClip>("Sounds/");
+        //가져온 AudioClips를 Dictionary에 추가
+        foreach (AudioClip clip in clips)
         {
-            sounds[ESoundType.BGM].Add(sound);
+            audioClips[clip.name] = clip;
         }
-        foreach(var sound in SFX)
+        //Enum형 이름을 string으로 변환해줌
+        string[] enumNames = Enum.GetNames(typeof(ESoundType));
+
+        //게임오브젝트를 오디오 클립종류만큼 생성하고 오디오 클립들을 그에 맞는 자식 오브젝트로 생성한다
+        for (int i = 0; i < (int)ESoundType.End; i++)
         {
-            sounds[ESoundType.SFX].Add(sound);
+            GameObject AudioSourceobj = new GameObject(enumNames[i]);
+            AudioSourceobj.transform.SetParent(transform);
+            AudioSourceClass sourceClass
+                = new AudioSourceClass
+                { audiosource = AudioSourceobj.AddComponent<AudioSource>(), audioVolume = 0.5f };
+            audioSourceClasses[(ESoundType)i] = sourceClass;
         }
+
+        audioSourceClasses[ESoundType.BGM].audiosource.loop = true;
     }
     /// <summary>
     /// 사운드 사져오는데 여러가지 요소를 넣어서 가져온다
     /// </summary>
     /// <param name="soundtype">어떤?</param>
     /// <param name="name">거기서 무슨?</param>
-    /// <param name="volum">소리크기는?</param>
+    /// <param name="volume">소리크기는?</param>
     /// <param name="pitch">이건 뭐야</param>
     /// <returns></returns>
-    public AudioClip PlayAudio(ESoundType soundtype, string name, float volum, float pitch = 1)
+    public AudioClip PlaySoundClip(string clipname, ESoundType type, float volume = 0.5f, float pitch = 1)
     {
-        AudioSource audioSource = null;
-        //사운드 타입을 넣고 꺼내고 싶은것을 꺼내야 하는데 index로 하면 어케 알어 야발어케하지 ㅋㅋ
-        //audioSource = sounds[soundtype];
+        AudioClip clip = audioClips[clipname];
+        audioSourceClasses[type].audiosource.pitch = pitch;
 
-        
-        
-        
-
-        return null;
-    }
-    /// <summary>
-    /// 나레이션 종류받아서 정하는 함수
-    /// </summary>
-    /// <param name="sound">열거형으로 나레이션 종류를 정함</param>
-
-    public void SelectNarration(ESoundType sound)
-    {
-        sounds[sound] = null;
-
-        switch(sound)
+        //현재 볼륨
+        float curVolume = volume * audioSourceClasses[type].audioVolume;
+        //만약 BGM을 틀었다면 틀어
+        if(type == ESoundType.BGM)
         {
-            case ESoundType.first:
-                foreach(var audio in firstaudio)
-                {
-                    sounds[sound].Add(audio);
-                }
-                break;
-            case ESoundType.second:
-                foreach (var audio in secondaudio)
-                {
-                    sounds[sound].Add(audio);
-                }
-                break;
-            case ESoundType.third:
-                foreach (var audio in thirdaudio)
-                {
-                    sounds[sound].Add(audio);
-                }
-                break;
-            case ESoundType.fourth:
-                foreach (var audio in fourthaudio)
-                {
-                    sounds[sound].Add(audio);
-                }
-                break;
-            case ESoundType.fifth:
-                foreach (var audio in fifthaudio)
-                {
-                    sounds[sound].Add(audio);
-                }
-                break;
+            audioSourceClasses[ESoundType.BGM].audiosource.clip = clip;
+            audioSourceClasses[ESoundType.BGM].audiosource.volume = curVolume;
+            audioSourceClasses[ESoundType.BGM].audiosource.Play();
         }
+        else//PlayOneShot
+        {
+            audioSourceClasses[type].audiosource.PlayOneShot(clip, curVolume);
+        }
+
+        return clip;
     }
 }
