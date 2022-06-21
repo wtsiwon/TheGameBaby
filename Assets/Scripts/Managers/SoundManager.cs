@@ -43,9 +43,23 @@ public class SoundManager : SingletonDDOL<SoundManager>
             sounds[ESoundType.SFX].Add(sound);
         }
     }
-    public AudioClip GetAudio(ESoundType soundtype, string name)
+    /// <summary>
+    /// 사운드 사져오는데 여러가지 요소를 넣어서 가져온다
+    /// </summary>
+    /// <param name="soundtype">어떤?</param>
+    /// <param name="name">거기서 무슨?</param>
+    /// <param name="volum">소리크기는?</param>
+    /// <param name="pitch">이건 뭐야</param>
+    /// <returns></returns>
+    public AudioClip PlayAudio(ESoundType soundtype, string name, float volum, float pitch = 1)
     {
-        AudioClip audioClip;
+        AudioSource audioSource = null;
+        //사운드 타입을 넣고 꺼내고 싶은것을 꺼내야 하는데 index로 하면 어케 알어 야발어케하지 ㅋㅋ
+        //audioSource = sounds[soundtype];
+
+        
+        
+        
 
         return null;
     }

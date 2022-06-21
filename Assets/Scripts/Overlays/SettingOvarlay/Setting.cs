@@ -7,6 +7,12 @@ using UnityEngine.EventSystems;
 
 public class Setting : MonoBehaviour
 {
+    //켜졋음?
+    private bool isquitboard;
+    private bool issoundboard;
+    private bool ismakerboard;
+
+    
     #region 이미지들
     [Header("Images")]
     [SerializeField]
@@ -14,7 +20,7 @@ public class Setting : MonoBehaviour
     [SerializeField]
     private Image quitimg;
     [SerializeField]
-    private Image gotitleimg;
+    private Image soundsetimg;
     #endregion
     #region buttons
     [Header("버튼들")]
@@ -25,7 +31,13 @@ public class Setting : MonoBehaviour
     [SerializeField]
     private Button quitbtn;
     [SerializeField]
-    private Button gotitlebtn;//타이틀로가는 버튼
+    private Button soundsetbtn;//소리 설정 버튼
+
+    [SerializeField]
+    private Button cancel;
+    [SerializeField]
+    private Button check;
+    [SerializeField]
     #endregion
     #region GameObject
     [SerializeField]
@@ -33,7 +45,7 @@ public class Setting : MonoBehaviour
     [SerializeField]
     private GameObject settingboard;
     [SerializeField]
-    private GameObject titlecheckboard;
+    private GameObject soundsetboard;
     [SerializeField]
     private GameObject quitcheckboard;
     [SerializeField]
@@ -47,7 +59,7 @@ public class Setting : MonoBehaviour
         {
             set.gameObject.SetActive(false);
             btnsobj.gameObject.SetActive(true);
-            gotitleimg.GetComponentInChildren<OverUIbutton>().overlay.gameObject.SetActive(false);
+            soundsetimg.GetComponentInChildren<OverUIbutton>().overlay.gameObject.SetActive(false);
             makerimg.GetComponentInChildren<OverUIbutton>().overlay.gameObject.SetActive(false);
             quitimg.GetComponentInChildren<OverUIbutton>().overlay.gameObject.SetActive(false);
             imgRotate();
@@ -55,13 +67,24 @@ public class Setting : MonoBehaviour
         makerbtn.onClick.AddListener(() =>
         {
             makerboard.SetActive(true);
+            ismakerboard = true;
         });
+        quitbtn.onClick.AddListener(() =>
+        {
+            quitcheckboard.SetActive(true);
+            isquitboard = true;
+        });
+        soundsetbtn.onClick.AddListener(() =>
+        {
+            soundsetboard.SetActive(true);
+            issoundboard = true;
+        });
+
 
     }
 
     private void imgRotate()
     {
-        btnsobj.transform.DORotate(new Vector3(0,0,0), 1f).SetEase(Ease.Flash);
+        btnsobj.transform.DORotate(new Vector3(0,0,0), 0.5f).SetEase(Ease.Flash);
     }
-
 }
