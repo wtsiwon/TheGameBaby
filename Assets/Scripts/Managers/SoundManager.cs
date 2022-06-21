@@ -12,8 +12,15 @@ public enum ESoundType
     fourth,
     fifth
 }
+public class AudioSouceClass
+{
+    public AudioSource Audiosource;
+    public float audioVolume;
+}
 public class SoundManager : SingletonDDOL<SoundManager>
 {
+    #region 사운드Lists
+    [Header("Sounds")]
     [SerializeField]
     private List<AudioClip> firstaudio = new List<AudioClip>();
     [SerializeField]
@@ -28,10 +35,13 @@ public class SoundManager : SingletonDDOL<SoundManager>
     private List<AudioClip> BGM = new List<AudioClip>();
     [SerializeField]
     private List<AudioClip> SFX = new List<AudioClip>();
+    #endregion
 
+    //안승준꺼 배껴서 하자
     private Dictionary<ESoundType, List<AudioClip>> sounds = new Dictionary<ESoundType, List<AudioClip>>();
     private Dictionary<string, List<AudioClip>> soundclip = new Dictionary<string, List<AudioClip>>();
 
+    //시작할때 사운드를 딕셔너리에 추가해줌
     private void Start()
     {
         foreach(var sound in BGM)
