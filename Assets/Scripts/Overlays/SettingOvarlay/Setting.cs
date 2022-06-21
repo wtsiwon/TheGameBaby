@@ -37,7 +37,6 @@ public class Setting : MonoBehaviour
     private Button cancel;
     [SerializeField]
     private Button check;
-    [SerializeField]
     #endregion
     #region GameObject
     [SerializeField]
