@@ -39,6 +39,9 @@ public class SoundManager : SingletonDDOL<SoundManager>
     private List<AudioClip> SFX = new List<AudioClip>();
     #endregion
 
+    public bool bgmmute;
+    public bool sfxmute;
+
     //오디오를 이름별로 분류해 있는 Dictionary
     private Dictionary<string, AudioClip> audioClips = new Dictionary<string, AudioClip>();
     //

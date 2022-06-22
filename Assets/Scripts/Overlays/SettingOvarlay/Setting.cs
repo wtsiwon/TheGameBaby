@@ -4,51 +4,63 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Setting : MonoBehaviour
 {
     //켜졋음?
-    private bool isquitboard;
-    private bool issoundboard;
-    private bool ismakerboard;
+    private bool isset;//해가 켜졋냐
+    private bool isquitboard;//나가기를 눌렀나
+    private bool issoundboard;//사운드를 눌렀나
+    private bool ismakerboard;//크래딧을 눌렀나
 
-    
-    #region 이미지들
-    [Header("Images")]
-    [SerializeField]
-    private Image makerimg;
-    [SerializeField]
-    private Image quitimg;
-    [SerializeField]
-    private Image soundsetimg;
-    #endregion
-    #region buttons
-    [Header("버튼들")]
     [SerializeField]
     private Button set;//여러가지 버튼들이 있는 버튼
+    #region makers
+    [SerializeField]
+    private GameObject makerboard;
     [SerializeField]
     private Button makerbtn;//제작자
     [SerializeField]
+    private Image makerimg;
+    #endregion
+
+    #region quit
+    [SerializeField]
+    private GameObject quitcheckboard;
+    [SerializeField]
     private Button quitbtn;
     [SerializeField]
-    private Button soundsetbtn;//소리 설정 버튼
+    private Image quitimg;
+    #endregion
 
+    #region sound
+    [SerializeField]
+    private Toggle bgmtg;
+    [SerializeField]
+    private Toggle sfxtg;
+
+    [SerializeField]
+    [Tooltip("사운드 껏다켤수 있는 보드")]
+    private GameObject soundsetboard;
+    [SerializeField]
+    private Button soundsetbtn;//소리 설정 버튼
+    [SerializeField]
+    private Image soundsetimg;//설정버튼
+    #endregion
+
+    #region check
     [SerializeField]
     private Button cancel;
     [SerializeField]
     private Button check;
     #endregion
+
     #region GameObject
     [SerializeField]
     private GameObject btnsobj;//돌아가는 버튼
     [SerializeField]
     private GameObject settingboard;
-    [SerializeField]
-    private GameObject soundsetboard;
-    [SerializeField]
-    private GameObject quitcheckboard;
-    [SerializeField]
-    private GameObject makerboard;
     #endregion
 
 
@@ -82,18 +94,32 @@ public class Setting : MonoBehaviour
             isquitboard = true;
         });
         #endregion
-        
+
         #region soundboard
         soundsetbtn.onClick.AddListener(() =>
         {
             soundsetboard.SetActive(true);
             issoundboard = true;
         });
-        #endregion
-    }
 
+        check.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("Title");
+        });
+        bgmtg.onValueChanged.AddListener((ison) => { SoundManager.Instance.bgmmute = ison; });
+        sfxtg.onValueChanged.AddListener((ison) => { SoundManager.Instance.sfxmute = ison; });
+        #endregion
+
+    }
     private void imgRotate()
     {
-        btnsobj.transform.DORotate(new Vector3(0,0,0), 0.5f).SetEase(Ease.Flash);
+        if (isset == false)
+        {
+            btnsobj.transform.DORotate(new Vector3(0, 0, 0), 0.5f).SetEase(Ease.Flash);
+        }
+        else
+        {
+            btnsobj.transform.DORotate(new Vector3(0, 0, 181), 0.5f).SetEase(Ease.Flash);
+        }
     }
 }
