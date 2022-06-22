@@ -2817,6 +2817,8 @@ MonoBehaviour:
   quitcheckboard: {fileID: 0}
   quitbtn: {fileID: 107771638}
   quitimg: {fileID: 1226116050}
+  bgmtg: {fileID: 0}
+  sfxtg: {fileID: 0}
   soundsetboard: {fileID: 0}
   soundsetbtn: {fileID: 1475005562}
   soundsetimg: {fileID: 250033631}
