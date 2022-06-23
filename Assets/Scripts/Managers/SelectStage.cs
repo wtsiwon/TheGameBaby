@@ -16,12 +16,32 @@ public class SelectStage : MonoBehaviour
 
     private void Stage()
     {
-        foreach (var btn in stageBtn)
+        stageBtn[0].onClick.AddListener(() =>
         {
-            btn.onClick.AddListener(() =>
-            {
-                SceneManager.LoadScene("Stage");
-            });
-        }
+            StageData.Instance.LoadStage(0);
+        });
+        stageBtn[1].onClick.AddListener(() =>
+        {
+            StageData.Instance.LoadStage(1);
+        });
+        stageBtn[2].onClick.AddListener(() =>
+        {
+            StageData.Instance.LoadStage(2);
+        });
+        stageBtn[3].onClick.AddListener(() =>
+        {
+            StageData.Instance.LoadStage(3);
+        });
+        stageBtn[4].onClick.AddListener(() =>
+        {
+            StageData.Instance.LoadStage(4);
+        });
+        stageBtn[5].onClick.AddListener(() =>
+        {
+            StageData.Instance.LoadStage(5);
+        });
+
+
+
     }
 }
