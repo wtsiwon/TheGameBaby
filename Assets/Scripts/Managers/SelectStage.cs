@@ -16,6 +16,12 @@ public class SelectStage : MonoBehaviour
 
     private void Stage()
     {
-        
+        foreach (var btn in stageBtn)
+        {
+            btn.onClick.AddListener(() =>
+            {
+                SceneManager.LoadScene("Stage");
+            });
+        }
     }
 }

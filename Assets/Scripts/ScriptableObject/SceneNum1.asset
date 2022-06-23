@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e43c9bbff6100124d9b565bcbd1bf3ed, type: 3}
   m_Name: SceneNum1
   m_EditorClassIdentifier: 
-  stage:
-  - slot1: {fileID: 0}
-    slot2: {fileID: 0}
-    slot3: {fileID: 0}
+  stages:
+  - slot1: {fileID: -239859684468764018, guid: 308ee371a01b91c478467b5683f763e4, type: 3}
+    slot2: {fileID: 7145381709974515439, guid: 308ee371a01b91c478467b5683f763e4, type: 3}
+    slot3: {fileID: 106187933984473821, guid: 308ee371a01b91c478467b5683f763e4, type: 3}
     word: {fileID: 0}
+    coword: {fileID: 0}
     back: {fileID: 0}
-    ground: {fileID: 0}
+    ground: {fileID: 21300000, guid: f896c32b713667d42a5f4b035c29182b, type: 3}
