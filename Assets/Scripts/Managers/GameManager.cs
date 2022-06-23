@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class GameManager : SingletonDDOL<GameManager>
 {
+    [Header("boolean")]
     public bool titleUp;//Ω√¿€ «‘?
-    public int Stage;
     public bool isUp;
     public bool selectGuide;
 
+    public int Stage;
     public Image[] slots;
     public Image wordimg;
 
@@ -26,7 +27,7 @@ public class GameManager : SingletonDDOL<GameManager>
             case 1:
                 for (int i = 0; i < 3; i++)
                 {
-                    slots[i].sprite = stage.stages[1].slot1;
+                    
                 }
                 
                 break;

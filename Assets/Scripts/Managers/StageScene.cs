@@ -12,10 +12,15 @@ public class StageScene : ScriptableObject
 [System.Serializable]
 public class Stage
 {
+    public Steps[] steps;
+}
+[System.Serializable]
+public struct Steps
+{
     public Sprite slot1;
     public Sprite slot2;
     public Sprite slot3;
-           
+
     public Sprite word;//맞추기 전 글자
     public Sprite coword;//맞추고 나오는 글자
     public Sprite back;

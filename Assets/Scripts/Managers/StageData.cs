@@ -20,14 +20,8 @@ public class StageData : SingletonDDOL<StageData>
     ///스테이지에 맞는 사진으로 바꿔주는 함수
     /// </summary>
     /// <param name="stagenum">Stage</param>
-    public void LoadStage(int stagenum)
+    public void LoadStage(int stageNum)
     {
-        slots[0].sprite = stagedata.stages[stagenum].slot1;
-        slots[1].sprite = stagedata.stages[stagenum].slot2;
-        slots[2].sprite = stagedata.stages[stagenum].slot3;
-
-        words.sprite = stagedata.stages[stagenum].word;
-        coWords.sprite = stagedata.stages[stagenum].coword;
-        ground.sprite = stagedata.stages[stagenum].ground;
+        slots[0].sprite = stagedata.stages[stageNum - 1].steps[0].slot1;
     }
 }
