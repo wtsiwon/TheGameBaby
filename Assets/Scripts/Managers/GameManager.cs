@@ -10,9 +10,13 @@ public class GameManager : SingletonDDOL<GameManager>
     public bool isUp;
     public bool selectGuide;
 
+    [Space(25f)]
+    [Header("인게임 요소")]
     public int Stage;
+    public int Step;
     public Image[] slots;
     public Image wordimg;
+    public Image picture;//단어에 대한 그림
 
     [HideInInspector]
     public GameObject guideAnimal;
@@ -24,13 +28,19 @@ public class GameManager : SingletonDDOL<GameManager>
     {
         switch (Stage)
         {
-            case 1:
-                for (int i = 0; i < 3; i++)
+            case 0:
+                switch (Step)
                 {
-                    
+                    case 0:
+                        slots[0].sprite = stage.stages[0].steps[0].slot1;
+                        slots[1].sprite = stage.stages[0].steps[0].slot2;
+                        slots[2].sprite = stage.stages[0].steps[0].slot3;
+
+
+                        break;
                 }
-                
                 break;
+               
         }
     }
 
