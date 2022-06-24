@@ -117,12 +117,22 @@ public class Setting : MonoBehaviour
 
         check.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene("Title");
+            if (quitcheckboard == true)
+            {
+                SceneManager.LoadScene("Title");
+            }
         });
-        bgmtg.onValueChanged.AddListener((ison) => { SoundManager.Instance.bgmmute = ison; });
-        sfxtg.onValueChanged.AddListener((ison) => { SoundManager.Instance.sfxmute = ison; });
+        bgmtg.onValueChanged.AddListener((ison) =>
+        {
+            SoundManager.Instance.bgmmute = ison;
+            PlayerPrefs.SetInt("bgmmute", SoundManager.Instance.bgmmute ? 1 : 0);
+        });
+        sfxtg.onValueChanged.AddListener((ison) =>
+        {
+            SoundManager.Instance.sfxmute = ison;
+            PlayerPrefs.SetInt("sfxmute", SoundManager.Instance.sfxmute ? 1 : 0);
+        });
         #endregion
-
     }
     private void imgRotate()
     {

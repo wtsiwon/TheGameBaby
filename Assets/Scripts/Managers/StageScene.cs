@@ -23,7 +23,7 @@ public struct Steps
 
     public Sprite word;//맞추기 전 글자
     public Sprite coword;//맞추고 나오는 글자
-    public Sprite back;
+    public Sprite back;//background
     public Sprite ground;
-    public Sprite guideimg;//단어에 대한 글자
+    public Sprite guideimg;//단어에 대한 사진
 }
