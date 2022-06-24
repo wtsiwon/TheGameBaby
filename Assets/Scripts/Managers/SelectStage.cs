@@ -9,7 +9,7 @@ public class SelectStage : MonoBehaviour
     [SerializeField]
     private Button[] stageBtn;
     [SerializeField]
-    private Button tutorial;
+    private Image[] stageLock;
 
     private void Start()
     {
@@ -20,10 +20,6 @@ public class SelectStage : MonoBehaviour
     /// </summary>
     private void Stage()
     {
-        tutorial.onClick.AddListener(() =>
-        {
-            SceneManager.LoadScene("Tutorial");
-        });
         stageBtn[0].onClick.AddListener(() =>
         {
             SceneManager.LoadScene("Stage");
@@ -53,6 +49,11 @@ public class SelectStage : MonoBehaviour
         {
             SceneManager.LoadScene("Stage");
             StageData.Instance.LoadStage(5);
+        });
+        stageBtn[6].onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("Stage");
+            StageData.Instance.LoadStage(6);
         });
     }
 }

@@ -17,6 +17,8 @@ public class Setting : MonoBehaviour
     [SerializeField]
     private Button set;//여러가지 버튼들이 있는 버튼
     #region makers
+    [Space(20f)]
+    [Header("MakersCredit")]
     [SerializeField]
     private GameObject makerboard;
     [SerializeField]
@@ -26,6 +28,8 @@ public class Setting : MonoBehaviour
     #endregion
 
     #region quit
+    [Space(30f)]
+    [Header("QuitBoard")]
     [SerializeField]
     private GameObject quitcheckboard;
     [SerializeField]
@@ -35,13 +39,17 @@ public class Setting : MonoBehaviour
     #endregion
 
     #region sound
+    [Header("SoundtToggle")]
+    [Space(20f)]
     [SerializeField]
     private Toggle bgmtg;
     [SerializeField]
     private Toggle sfxtg;
 
-    [SerializeField]
+    [Space(20f)]
     [Tooltip("사운드 껏다켤수 있는 보드")]
+    [Header("사운드 껏다켤수 있는 보드")]
+    [SerializeField]
     private GameObject soundsetboard;
     [SerializeField]
     private Button soundsetbtn;//소리 설정 버튼
@@ -50,6 +58,9 @@ public class Setting : MonoBehaviour
     #endregion
 
     #region check
+    [Space(25f)]
+
+    [Header("true false")]
     [SerializeField]
     private Button cancel;
     [SerializeField]
@@ -57,10 +68,12 @@ public class Setting : MonoBehaviour
     #endregion
 
     #region GameObject
+    [Space(20f)]
+    [Header("GameObject")]
     [SerializeField]
     private GameObject btnsobj;//돌아가는 버튼
-    [SerializeField]
-    private GameObject settingboard;
+    //[SerializeField]
+    //private GameObject settingboard;
     #endregion
 
 
