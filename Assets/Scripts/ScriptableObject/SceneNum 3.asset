@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43c9bbff6100124d9b565bcbd1bf3ed, type: 3}
+  m_Name: SceneNum 3
+  m_EditorClassIdentifier: 
+  steps:
+  - slot:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    word: {fileID: 0}
+    coword: {fileID: 0}
+    guideimg: {fileID: 0}
+  - slot:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    word: {fileID: 0}
+    coword: {fileID: 0}
+    guideimg: {fileID: 0}
+  - slot:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    word: {fileID: 0}
+    coword: {fileID: 0}
+    guideimg: {fileID: 0}
+  - slot:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    word: {fileID: 0}
+    coword: {fileID: 0}
+    guideimg: {fileID: 0}
+  - slot:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    word: {fileID: 0}
+    coword: {fileID: 0}
+    guideimg: {fileID: 0}
+  ground: {fileID: 0}

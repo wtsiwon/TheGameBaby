@@ -6,24 +6,15 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "SceneNum", menuName = "Scenes/SceneData", order = 1)]
 public class StageScene : ScriptableObject
 {
-    public Stage[] stages;
-}
-
-[System.Serializable]
-public class Stage
-{
     public Steps[] steps;
+    public Sprite ground;//ground
 }
 [System.Serializable]
 public struct Steps
 {
-    public Sprite slot1;
-    public Sprite slot2;
-    public Sprite slot3;
+    public GameObject[] slot;
 
-    public Sprite word;//맞추기 전 글자
-    public Sprite coword;//맞추고 나오는 글자
-    public Sprite back;//background
-    public Sprite ground;
+    public GameObject word;//맞추기 전 글자
+    public GameObject coword;//맞추고 나오는 글자
     public Sprite guideimg;//단어에 대한 사진
 }

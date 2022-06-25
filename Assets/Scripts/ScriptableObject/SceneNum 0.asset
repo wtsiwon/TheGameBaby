@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43c9bbff6100124d9b565bcbd1bf3ed, type: 3}
+  m_Name: SceneNum 0
+  m_EditorClassIdentifier: 
+  steps:
+  - slot:
+    - {fileID: 6396187698942344709, guid: 2e29ed9623a67df4894b0d54b12b76e3, type: 3}
+    - {fileID: 5199366986879851289, guid: fa438672abe24414bb84527d281ce0e2, type: 3}
+    - {fileID: 3669437547302188826, guid: a5edb7eb02364774288e43c33e2995fb, type: 3}
+    word: {fileID: 1009228719412136317, guid: 56e94bd3abaa87f4f8b5ae3fb98af66b, type: 3}
+    coword: {fileID: 3005706092275236952, guid: 6ec0164751a5ebf43a50da471c05c5f9, type: 3}
+    guideimg: {fileID: 0}
+  - slot:
+    - {fileID: 3074134945996875675, guid: 7798aacac51b55b448875c133ad2b03b, type: 3}
+    - {fileID: 2220756851550645744, guid: 277164f466d26974b8dcd4b08d00c09b, type: 3}
+    - {fileID: 8405078820530172689, guid: 534364b5aa5154e44ba678047a1ca2bf, type: 3}
+    word: {fileID: 7399022768722126288, guid: ee911338f6f010545a03bb65f7aaefa8, type: 3}
+    coword: {fileID: 2310490284948764106, guid: d15075049795f354e8c52c03d9dd782c, type: 3}
+    guideimg: {fileID: 0}
+  ground: {fileID: 21300000, guid: f70d266601b5a3741bd53832e8e13bec, type: 3}
