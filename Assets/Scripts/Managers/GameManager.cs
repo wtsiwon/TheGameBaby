@@ -9,6 +9,7 @@ public class GameManager : SingletonDDOL<GameManager>
     public bool titleUp;//시작 함?
     public bool isUp;
     public bool selectGuide;
+    public bool isCorrect;
 
     [Space(25f)]
     [Header("인게임 요소")]
@@ -18,5 +19,8 @@ public class GameManager : SingletonDDOL<GameManager>
     [HideInInspector]
     public GameObject guideAnimal;
 
+    public Image currentimg;
+    public Image draggingimg;
 
+    
 }

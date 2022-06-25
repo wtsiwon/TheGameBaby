@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class BogOverlay : GuideSelect
 {
-    
-
     protected override void CheckActive()
     {
         Checkboard.gameObject.SetActive(true);
