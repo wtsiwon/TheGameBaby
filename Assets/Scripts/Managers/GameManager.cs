@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : SingletonDDOL<GameManager>
 {
@@ -18,9 +19,16 @@ public class GameManager : SingletonDDOL<GameManager>
 
     [HideInInspector]
     public GameObject guideAnimal;
+    public GameObject clear;
 
     public Image currentimg;
     public Image draggingimg;
 
-    
+    /// <summary>
+    /// 현재씬을 다시 로드해 다음 단계 오브젝트로 변경
+    /// </summary>
+    public void Resets()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

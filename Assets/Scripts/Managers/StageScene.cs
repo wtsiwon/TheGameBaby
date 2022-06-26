@@ -12,7 +12,7 @@ public class StageScene : ScriptableObject
 [System.Serializable]
 public struct Steps
 {
-    public GameObject[] slot;
+    public GameObject[] slot;//자음 선택지
 
     public GameObject word;//맞추기 전 글자
     public GameObject coword;//맞추고 나오는 글자

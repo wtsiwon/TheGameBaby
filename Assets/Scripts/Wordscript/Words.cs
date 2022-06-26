@@ -3,11 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
+public enum types
+{
+    ぁ = 1,
+    い,
+    ぇ,
+    ぉ,
+    け,
+    げ,
+    さ,
+    し,
+    じ,
+    ず,
+    せ,
+    ぜ,
+    そ,
+    ぞ
+}
 public class Words : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private RectTransform RT;
     public Image coWord;
+    public types type;
 
     private void Awake()
     {

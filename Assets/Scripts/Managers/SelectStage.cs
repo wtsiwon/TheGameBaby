@@ -20,40 +20,51 @@ public class SelectStage : MonoBehaviour
     /// </summary>
     private void Stage()
     {
-        //stageBtn[0].onClick.AddListener(() =>
-        //{
-        //    SceneManager.LoadScene("Stage");
-        //    StageData.Instance.LoadStage(0);
-        //});
-        //stageBtn[1].onClick.AddListener(() =>
-        //{
-        //    SceneManager.LoadScene("Stage");
-        //    StageData.Instance.LoadStage(1);
-        //});
-        //stageBtn[2].onClick.AddListener(() =>
-        //{
-        //    SceneManager.LoadScene("Stage");
-        //    StageData.Instance.LoadStage(2);
-        //});
-        //stageBtn[3].onClick.AddListener(() =>
-        //{
-        //    SceneManager.LoadScene("Stage");
-        //    StageData.Instance.LoadStage(3);
-        //});
-        //stageBtn[4].onClick.AddListener(() =>
-        //{
-        //    SceneManager.LoadScene("Stage");
-        //    StageData.Instance.LoadStage(4);
-        //});
-        //stageBtn[5].onClick.AddListener(() =>
-        //{
-        //    SceneManager.LoadScene("Stage");
-        //    StageData.Instance.LoadStage(5);
-        //});
-        //stageBtn[6].onClick.AddListener(() =>
-        //{
-        //    SceneManager.LoadScene("Stage");
-        //    StageData.Instance.LoadStage(6);
-        //});
+        stageBtn[0].onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("Stage");
+            GameManager.Instance.Stage = 0;
+        });
+        stageBtn[1].onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("Stage");
+            GameManager.Instance.Stage = 1;
+        });
+        stageBtn[2].onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("Stage");
+            GameManager.Instance.Stage = 2;
+        });
+        stageBtn[3].onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("Stage");
+            GameManager.Instance.Stage = 3;
+        });
+        stageBtn[4].onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("Stage");
+            GameManager.Instance.Stage = 4;
+        });
+        stageBtn[5].onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("Stage");
+            GameManager.Instance.Stage = 5;
+        });
+        stageBtn[6].onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("Stage");
+            GameManager.Instance.Stage = 6;
+        });
+    }
+    private void Active()
+    {
+        if (GameManager.Instance.Stage >= 4)
+        {
+
+        }
+        else if(GameManager.Instance.Stage >= 3)
+        {
+
+        }
     }
 }

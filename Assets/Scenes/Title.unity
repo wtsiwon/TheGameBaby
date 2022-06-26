@@ -2067,13 +2067,13 @@ MonoBehaviour:
   titleUp: 0
   isUp: 0
   selectGuide: 0
+  isCorrect: 0
   Stage: 0
   Step: 0
-  slots: []
-  wordimg: {fileID: 0}
-  picture: {fileID: 0}
   guideAnimal: {fileID: 0}
-  stage: {fileID: 0}
+  clear: {fileID: 0}
+  currentimg: {fileID: 0}
+  draggingimg: {fileID: 0}
 --- !u!1001 &1107363238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3584,7 +3584,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1687591134}
-  - component: {fileID: 1687591133}
   m_Layer: 0
   m_Name: BtnManager
   m_TagString: Untagged
@@ -3592,18 +3591,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1687591133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687591132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3c0a1f73c746164b8e936634f3546fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1687591134
 Transform:
   m_ObjectHideFlags: 0

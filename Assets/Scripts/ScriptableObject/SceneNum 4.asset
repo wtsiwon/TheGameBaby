@@ -12,5 +12,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e43c9bbff6100124d9b565bcbd1bf3ed, type: 3}
   m_Name: SceneNum 4
   m_EditorClassIdentifier: 
-  stages:
-  - steps: []
+  steps:
+  - slot:
+    - {fileID: 3944784336278230749, guid: 33f286c0f43214d479363c26d2d3b766, type: 3}
+    - {fileID: 5199366986879851289, guid: fa438672abe24414bb84527d281ce0e2, type: 3}
+    - {fileID: 3669437547302188826, guid: a5edb7eb02364774288e43c33e2995fb, type: 3}
+    word: {fileID: 2162826517323334674, guid: 1da8be5931a44f74daa97a0681bbdfc0, type: 3}
+    coword: {fileID: 2931480715929929840, guid: 7a200db770330af458e532dd10890975, type: 3}
+    guideimg: {fileID: 0}
+  - slot:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    word: {fileID: 5784083779027108219, guid: feecf3e1de484d24888ef0a2a5b9cbde, type: 3}
+    coword: {fileID: 7236403778790410247, guid: d77bea013f4ecfd4eacf5b6f0a03192f, type: 3}
+    guideimg: {fileID: 0}
+  - slot:
+    - {fileID: 3030569132938685045, guid: 658e06526a611084d8e2416f731582b1, type: 3}
+    - {fileID: 8405078820530172689, guid: 534364b5aa5154e44ba678047a1ca2bf, type: 3}
+    - {fileID: 8809048436365346811, guid: f55cf8162f873434c9f99ee1b269d5d7, type: 3}
+    word: {fileID: 4098817786031713056, guid: 0ea885df4926c724587c7b56b4ed1d71, type: 3}
+    coword: {fileID: 3906615640985098138, guid: 1edd7ec7a6780e549b8e6a5ade5df053, type: 3}
+    guideimg: {fileID: 0}
+  - slot:
+    - {fileID: 3944784336278230749, guid: 33f286c0f43214d479363c26d2d3b766, type: 3}
+    - {fileID: 6396187698942344709, guid: 2e29ed9623a67df4894b0d54b12b76e3, type: 3}
+    - {fileID: 8096245659315153457, guid: 301e3d8138eaba04d9fc7256b8b16cdc, type: 3}
+    word: {fileID: 3241881652352926140, guid: d0ebcdf538a109f4aaffd134c9fa92f4, type: 3}
+    coword: {fileID: 3241881652352926140, guid: d0ebcdf538a109f4aaffd134c9fa92f4, type: 3}
+    guideimg: {fileID: 0}
+  - slot:
+    - {fileID: 5714527223513606765, guid: 4ed229d65bafeea42b41ee6e71f12f27, type: 3}
+    - {fileID: 2220756851550645744, guid: 277164f466d26974b8dcd4b08d00c09b, type: 3}
+    - {fileID: 7671962603129778515, guid: 9f98a11ffb394ee408621dce2700d87d, type: 3}
+    word: {fileID: 7196457565104357098, guid: 70e4b2dd22790934eac5b1e9a83f742c, type: 3}
+    coword: {fileID: 3941813336739982690, guid: 0742dcfe4ad580a4b9dde91b3614008d, type: 3}
+    guideimg: {fileID: 0}
+  ground: {fileID: 0}

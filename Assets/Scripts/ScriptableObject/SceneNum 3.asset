@@ -14,38 +14,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   steps:
   - slot:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    word: {fileID: 0}
-    coword: {fileID: 0}
+    - {fileID: 6396187698942344709, guid: 2e29ed9623a67df4894b0d54b12b76e3, type: 3}
+    - {fileID: 8450384390271345110, guid: df57663c750ca9e49871c486c72f1d02, type: 3}
+    - {fileID: 3030569132938685045, guid: 658e06526a611084d8e2416f731582b1, type: 3}
+    word: {fileID: 5391067538906207194, guid: 5bddbe693aaa86d47a4ada6f165ec6c0, type: 3}
+    coword: {fileID: 4655346133492566315, guid: e190484887a1ab647887ea92d02fe84e, type: 3}
     guideimg: {fileID: 0}
   - slot:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    word: {fileID: 0}
-    coword: {fileID: 0}
+    - {fileID: 8450384390271345110, guid: df57663c750ca9e49871c486c72f1d02, type: 3}
+    - {fileID: 8809048436365346811, guid: f55cf8162f873434c9f99ee1b269d5d7, type: 3}
+    - {fileID: 2220756851550645744, guid: 277164f466d26974b8dcd4b08d00c09b, type: 3}
+    word: {fileID: 8970334866413246459, guid: 1a24245a2c734cc43b4bf7676ae072ad, type: 3}
+    coword: {fileID: 2292182406655302643, guid: c8d6ae272daf683498891e507b970563, type: 3}
     guideimg: {fileID: 0}
   - slot:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    word: {fileID: 0}
-    coword: {fileID: 0}
+    - {fileID: 3944784336278230749, guid: 33f286c0f43214d479363c26d2d3b766, type: 3}
+    - {fileID: 3030569132938685045, guid: 658e06526a611084d8e2416f731582b1, type: 3}
+    - {fileID: 6663270323309304520, guid: 9f9deb315a812914d84f528ed244c9d0, type: 3}
+    word: {fileID: 7993502912777268093, guid: ed363f643594e9049a00008dde425aa0, type: 3}
+    coword: {fileID: 7440088696112580914, guid: 7a0111efa9aa85e49bdfec7dd7d10f43, type: 3}
     guideimg: {fileID: 0}
   - slot:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    word: {fileID: 0}
-    coword: {fileID: 0}
+    - {fileID: 5714527223513606765, guid: 4ed229d65bafeea42b41ee6e71f12f27, type: 3}
+    - {fileID: 3030569132938685045, guid: 658e06526a611084d8e2416f731582b1, type: 3}
+    - {fileID: 3074134945996875675, guid: 7798aacac51b55b448875c133ad2b03b, type: 3}
+    word: {fileID: 1389195358868310532, guid: 81e66a699be9c8045ac877c4b425f5fc, type: 3}
+    coword: {fileID: 7429928785962253477, guid: 2f0148cfd62443248979143c796c6dd2, type: 3}
     guideimg: {fileID: 0}
   - slot:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    word: {fileID: 0}
-    coword: {fileID: 0}
+    - {fileID: 8450384390271345110, guid: df57663c750ca9e49871c486c72f1d02, type: 3}
+    - {fileID: 3944784336278230749, guid: 33f286c0f43214d479363c26d2d3b766, type: 3}
+    - {fileID: 8809048436365346811, guid: f55cf8162f873434c9f99ee1b269d5d7, type: 3}
+    word: {fileID: 8717014014179657089, guid: 8ab8a29f3008b57418e8419aceeec1b0, type: 3}
+    coword: {fileID: 3920043219395955014, guid: 07802378b8c294e43bce59668140bee2, type: 3}
     guideimg: {fileID: 0}
-  ground: {fileID: 0}
+  ground: {fileID: 21300000, guid: f70d266601b5a3741bd53832e8e13bec, type: 3}

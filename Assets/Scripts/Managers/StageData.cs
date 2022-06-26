@@ -17,28 +17,21 @@ public class StageData : SingletonDDOL<StageData>
 
     [SerializeField]
     private Image ground;
-    
+
 
     /// <summary>
     ///스테이지에 맞는 사진으로 바꿔주는 함수
     /// </summary>
     /// <param name="stagenum">Stage</param>
-    public void LoadStage(int stageNum,int step)
+    /// <param name="step">단계</param>
+    public void LoadStage(int stageNum, int step)
     {
-        switch (stageNum)
+        ground.sprite = stagedata[stageNum].ground;
+        for (int i = 0; i < 3; i++)
         {
-            case 0:
-                ground.sprite = stagedata[stageNum].ground;
-                switch (step)
-                {
-                    case 0:
-                        for (int i = 0; i < 3; i++)
-                        {
-                            slots[i] = stagedata[stageNum].steps[step].slot[i];
-                        }
-                        break;
-                }
-                break;
+            slots[i] = stagedata[stageNum].steps[step].slot[i];
         }
+        coWords = stagedata[stageNum].steps[step].coword;
+        words = stagedata[stageNum].steps[step].word;
     }
 }
