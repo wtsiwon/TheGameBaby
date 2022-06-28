@@ -33,7 +33,7 @@ public class Words : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     public void OnBeginDrag(PointerEventData eventData)
     {
         //지금 드래그 중인 이미지(나)를 저장
-        GameManager.Instance.draggingimg = GetComponent<Image>();
+        GameManager.Instance.draggingobj = this.gameObject;
     }
     public void OnDrag(PointerEventData eventData)
     {
@@ -41,14 +41,20 @@ public class Words : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        GameManager.Instance.draggingimg = null;
+        GameManager.Instance.draggingobj = null;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.Instance.currentimg = collision.GetComponent<Image>();
+        if (collision.CompareTag("Coword"))
+        {
+            GameManager.Instance.currentobj = collision.gameObject;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        GameManager.Instance.currentimg = null;
+        if (collision.CompareTag("Coword"))
+        {
+            GameManager.Instance.currentobj = collision.gameObject;
+        }
     }
 }

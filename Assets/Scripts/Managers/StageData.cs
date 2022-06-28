@@ -9,6 +9,9 @@ public class StageData : SingletonDDOL<StageData>
     private StageScene[] stagedata;
 
     [SerializeField]
+    private Canvas canvas;
+
+    [SerializeField]
     private GameObject[] slots;
     [SerializeField]
     private GameObject words;
@@ -18,6 +21,7 @@ public class StageData : SingletonDDOL<StageData>
     [SerializeField]
     private Image ground;
 
+    
 
     /// <summary>
     ///스테이지에 맞는 사진으로 바꿔주는 함수
@@ -29,9 +33,11 @@ public class StageData : SingletonDDOL<StageData>
         ground.sprite = stagedata[stageNum].ground;
         for (int i = 0; i < 3; i++)
         {
-            slots[i] = stagedata[stageNum].steps[step].slot[i];
+            var obj = Instantiate(stagedata[stageNum].steps[step].slot[i]);
+            obj.transform.parent = slots[i].transform;
         }
-        coWords = stagedata[stageNum].steps[step].coword;
+        coWords.transform.SetParent(Instantiate(stagedata[stageNum].steps[step].coword).transform);
+        
         words = stagedata[stageNum].steps[step].word;
     }
 }

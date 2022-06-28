@@ -15,7 +15,6 @@ public enum EguideType
 public class Guide : MonoBehaviour
 {
     public EguideType eguideType;
-    public string name;
     private void OnEnable()
     {
         Invoke(nameof(GoGuideSelect), 2.5f);

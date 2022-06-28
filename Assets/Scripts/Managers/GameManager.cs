@@ -21,13 +21,13 @@ public class GameManager : SingletonDDOL<GameManager>
     public GameObject guideAnimal;
     public GameObject clear;
 
-    public Image currentimg;
-    public Image draggingimg;
+    public GameObject currentobj;
+    public GameObject draggingobj;
 
     /// <summary>
     /// 현재씬을 다시 로드해 다음 단계 오브젝트로 변경
     /// </summary>
-    public void Resets()
+    public void Resetstep()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

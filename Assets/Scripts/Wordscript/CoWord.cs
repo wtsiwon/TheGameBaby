@@ -30,7 +30,7 @@ public class CoWord : MonoBehaviour
         GameManager.Instance.clear.transform.DOScaleX(1, 1.1f);
         GameManager.Instance.clear.transform.DOScaleY(1, 1.1f);
         yield return new WaitForSeconds(2f);
-        GameManager.Instance.Resets();
+        GameManager.Instance.Resetstep();
         GameManager.Instance.Step++;
     }
 }
