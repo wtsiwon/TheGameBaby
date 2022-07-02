@@ -7,20 +7,17 @@ public class CoWord : MonoBehaviour
 {
     public bool isCorrect;
     public GameObject coWord;
+    public Transform pos;
     public types type;
     public Canvas canvas;
 
-    private void OnEnable()
-    {
-        canvas = FindObjectOfType<Canvas>();
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var colobj = collision.GetComponent<Words>();
         if(type == colobj.type)
         {
             isCorrect = true;
-            coWord.SetActive(true);
+            coWord.transform.parent.gameObject.SetActive(true);
             StartCoroutine(Nextstep());
         }
     }
@@ -30,7 +27,7 @@ public class CoWord : MonoBehaviour
         GameManager.Instance.clear.transform.DOScaleX(1, 1.1f);
         GameManager.Instance.clear.transform.DOScaleY(1, 1.1f);
         yield return new WaitForSeconds(2f);
-        GameManager.Instance.Resetstep();
         GameManager.Instance.Step++;
+        GameManager.Instance.Resetstep();
     }
 }

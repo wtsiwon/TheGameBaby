@@ -15,10 +15,7 @@ public class TitleManager : Singleton<TitleManager>
 
     [SerializeField]
     private Button backGroundButton;
-    
 
-    [SerializeField]
-    private Button quitbtn;
     [SerializeField]
     private GameObject quitCheck;
 
@@ -34,10 +31,6 @@ public class TitleManager : Singleton<TitleManager>
     {
         fadeColor = backGroundButton.GetComponent<Image>().color;
         fade = backGroundButton.GetComponent<Image>();
-        quitbtn.onClick.AddListener(() =>
-        {
-
-        });
 
         MoveTitle();
         GoSelectGuide();

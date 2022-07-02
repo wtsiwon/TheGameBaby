@@ -20,28 +20,42 @@ public enum types
     ㅍ,
     ㅎ
 }
-public class Words : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class Words : MonoBehaviour
 {
-    private RectTransform RT;
-    public Image coWord;
+    private Transform T;
     public types type;
+    public bool isDrag;
+    public Vector3 firstpos;
 
     private void Awake()
     {
-        RT = GetComponent<RectTransform>();
+        firstpos = transform.position;
+        T = GetComponent<Transform>();
     }
-    public void OnBeginDrag(PointerEventData eventData)
+    private void OnMouseDown()
     {
         //지금 드래그 중인 이미지(나)를 저장
         GameManager.Instance.draggingobj = this.gameObject;
+        isDrag = true;
+        print("어쩔티비");
     }
-    public void OnDrag(PointerEventData eventData)
+    private void Update()
     {
-        RT.position = eventData.position;
+        if (isDrag == true)
+        {
+            Vector2 mousepos;
+            mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            gameObject.transform.position = mousepos;
+        }
     }
-    public void OnEndDrag(PointerEventData eventData)
+    private void OnMouseUp()
     {
+        isDrag = false;
         GameManager.Instance.draggingobj = null;
+        if(GameManager.Instance.isCorrect == false)
+        {
+            gameObject.transform.position = firstpos;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -54,7 +68,7 @@ public class Words : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     {
         if (collision.CompareTag("Coword"))
         {
-            GameManager.Instance.currentobj = collision.gameObject;
+            GameManager.Instance.currentobj = null;
         }
     }
 }
