@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StageData : SingletonDDOL<StageData>
 {
@@ -30,6 +31,11 @@ public class StageData : SingletonDDOL<StageData>
     /// <param name="step">´Ü°è</param>
     public void LoadStage(int stageNum, int step)
     {
+        if (stageNum == 0 && step > 2 || stageNum > 0 && step > 4)
+        {
+            SceneManager.LoadScene("SelectStage");
+        }
+        
         ground.sprite = stagedata[stageNum].ground;
         for (int i = 0; i < 3; i++)
         {

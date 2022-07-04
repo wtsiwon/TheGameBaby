@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+[System.Serializable]
+public class obj
+{
+    public GameObject[] coobj;
+}
 public class GameManager : SingletonDDOL<GameManager>
 {
     [Header("boolean")]
@@ -17,6 +22,14 @@ public class GameManager : SingletonDDOL<GameManager>
     public int Stage;
     public int Step;
 
+    [Space(25f)]
+    [Header("맞은 오브젝트")]
+    public obj[] objs;
+    
+
+    public Dictionary<int, int> stagestep = new Dictionary<int, int>();
+    public Dictionary<Dictionary<int, int>, GameObject> obj = new Dictionary<Dictionary<int, int>, GameObject>();
+
     [HideInInspector]
     public GameObject guideAnimal;
     public GameObject clear;
@@ -24,11 +37,39 @@ public class GameManager : SingletonDDOL<GameManager>
     public GameObject currentobj;
     public GameObject draggingobj;
 
+    private void Start()
+    {
+
+        //for (int i = 0; i < 5; i++)
+        //{
+        //    for (int j = 0; j < 5; j++)
+        //    {
+        //        if(i == 0 && j == 2)
+        //        {
+        //            break;
+        //        }
+        //        stagestep.Add(i, j);
+        //    }
+        //}
+        //for (int i = 0; i < 5; i++)
+        //{
+        //    for (int j = 0; j < 5; j++)
+        //    {
+        //        if (i == 0 && j == 2)
+        //        {
+        //            break;
+        //        }
+        //        obj.Add(stagestep, objs[i,j]);
+        //    }
+        //}
+    }
     /// <summary>
     /// 현재씬을 다시 로드해 다음 단계 오브젝트로 변경
     /// </summary>
     public void Resetstep()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Step = 0;
+        isCorrect = false;
     }
 }

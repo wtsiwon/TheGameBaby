@@ -20,6 +20,15 @@ public class SelectStage : MonoBehaviour
     /// </summary>
     private void Stage()
     {
+        //for (int i = 0; i < 5; i++)
+        //{
+        //    stageBtn[i].onClick.AddListener(() =>
+        //    {
+        //        SceneManager.LoadScene("Stage");
+        //        GameManager.Instance.Stage = i;
+        //    });
+        //}
+        #region ¹öÆ°
         stageBtn[0].onClick.AddListener(() =>
         {
             SceneManager.LoadScene("Stage");
@@ -45,26 +54,16 @@ public class SelectStage : MonoBehaviour
             SceneManager.LoadScene("Stage");
             GameManager.Instance.Stage = 4;
         });
-        stageBtn[5].onClick.AddListener(() =>
-        {
-            SceneManager.LoadScene("Stage");
-            GameManager.Instance.Stage = 5;
-        });
-        stageBtn[6].onClick.AddListener(() =>
-        {
-            SceneManager.LoadScene("Stage");
-            GameManager.Instance.Stage = 6;
-        });
-    }
-    private void Active()
-    {
-        if (GameManager.Instance.Stage >= 4)
-        {
-
-        }
-        else if(GameManager.Instance.Stage >= 3)
-        {
-
-        }
+        //stageBtn[5].onClick.AddListener(() =>
+        //{
+        //    SceneManager.LoadScene("Stage");
+        //    GameManager.Instance.Stage = 5;
+        //});
+        //stageBtn[6].onClick.AddListener(() =>
+        //{
+        //    SceneManager.LoadScene("Stage");
+        //    GameManager.Instance.Stage = 6;
+        //});
+        #endregion
     }
 }

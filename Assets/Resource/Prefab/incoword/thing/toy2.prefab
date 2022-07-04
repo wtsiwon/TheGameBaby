@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1993264800278777227}
   - component: {fileID: 1940246665354175279}
   - component: {fileID: 1122647351185536724}
+  - component: {fileID: 1354069844153589801}
   m_Layer: 0
   m_Name: toy2
-  m_TagString: Untagged
+  m_TagString: Coword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,8 +96,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e285acd3f8d115479b6373f10a11337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCorrect: 0
-  coWord: {fileID: 0}
-  pos: {fileID: 0}
-  type: 0
-  canvas: {fileID: 0}
+  coWord: {fileID: 8659239056182963713, guid: f1b870e9892d7bb4895ccef19a1ef72a, type: 3}
+  type: 2
+--- !u!61 &1354069844153589801
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8768817064716875821}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.62, y: 1.31}
+    newSize: {x: 3.62, y: 1.31}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.62, y: 1.31}
+  m_EdgeRadius: 0

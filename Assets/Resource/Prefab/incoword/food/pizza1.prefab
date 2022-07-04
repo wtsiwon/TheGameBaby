@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8263859743145743151}
   - component: {fileID: 1995349817439864164}
   - component: {fileID: 6403945573717498855}
+  - component: {fileID: 5569672468823479605}
   m_Layer: 0
   m_Name: pizza1
-  m_TagString: Untagged
+  m_TagString: Coword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,8 +96,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e285acd3f8d115479b6373f10a11337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCorrect: 0
-  coWord: {fileID: 0}
-  pos: {fileID: 0}
-  type: 0
-  canvas: {fileID: 0}
+  coWord: {fileID: 3941813336739982690, guid: 0742dcfe4ad580a4b9dde91b3614008d, type: 3}
+  type: 13
+--- !u!61 &5569672468823479605
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7196457565104357098}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.38, y: 1.29}
+    newSize: {x: 2.38, y: 1.29}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.38, y: 1.29}
+  m_EdgeRadius: 0

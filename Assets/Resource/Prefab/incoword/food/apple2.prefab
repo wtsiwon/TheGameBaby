@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6039937739276668346}
   - component: {fileID: 8518292538316828142}
   - component: {fileID: -1524687682205816308}
+  - component: {fileID: -3431122941094849795}
   m_Layer: 0
   m_Name: apple2
-  m_TagString: Untagged
+  m_TagString: Coword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,8 +96,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e285acd3f8d115479b6373f10a11337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCorrect: 0
-  coWord: {fileID: 0}
-  pos: {fileID: 0}
-  type: 0
-  canvas: {fileID: 0}
+  coWord: {fileID: 2931480715929929840, guid: 7a200db770330af458e532dd10890975, type: 3}
+  type: 1
+--- !u!61 &-3431122941094849795
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2162826517323334674}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.43, y: 1.07}
+    newSize: {x: 2.43, y: 1.07}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.43, y: 1.07}
+  m_EdgeRadius: 0

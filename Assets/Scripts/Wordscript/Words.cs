@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using DG.Tweening;
 public enum types
 {
     ㄱ = 1,
@@ -22,20 +23,20 @@ public enum types
 }
 public class Words : MonoBehaviour
 {
-    private Transform T;
+    private Vector2 firstpos;
     public types type;
     public bool isDrag;
-    public Vector3 firstpos;
-
+    public Canvas canvas;
     private void Awake()
     {
         firstpos = transform.position;
-        T = GetComponent<Transform>();
+        canvas = FindObjectOfType<Canvas>();
     }
     private void OnMouseDown()
     {
         //지금 드래그 중인 이미지(나)를 저장
-        GameManager.Instance.draggingobj = this.gameObject;
+        GameManager.Instance.draggingobj = gameObject;
+        GetComponent<SpriteRenderer>().sortingOrder += 1;
         isDrag = true;
         print("어쩔티비");
     }
@@ -52,13 +53,22 @@ public class Words : MonoBehaviour
     {
         isDrag = false;
         GameManager.Instance.draggingobj = null;
-        if(GameManager.Instance.isCorrect == false)
+        if (GameManager.Instance.isCorrect == false)
         {
             gameObject.transform.position = firstpos;
         }
+        else if (GameManager.Instance.isCorrect == true)
+        {
+            print("아니");
+            //GameManager.Instance.currentobj.GetComponent<CoWord>().coWord.SetActive(true);
+            StartCoroutine(Nextstep());
+            Instantiate(GameManager.Instance.objs[GameManager.Instance.Stage].coobj[GameManager.Instance.Step], transform.position, Quaternion.identity);
+        }
+        GetComponent<SpriteRenderer>().sortingOrder -= 1;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        print("충돌은 되냐?");
         if (collision.CompareTag("Coword"))
         {
             GameManager.Instance.currentobj = collision.gameObject;
@@ -70,5 +80,14 @@ public class Words : MonoBehaviour
         {
             GameManager.Instance.currentobj = null;
         }
+    }
+    private IEnumerator Nextstep()
+    {
+        Instantiate(GameManager.Instance.clear, canvas.transform);
+        GameManager.Instance.clear.transform.DOScaleX(1, 1.1f);
+        GameManager.Instance.clear.transform.DOScaleY(1, 1.1f);
+        yield return new WaitForSeconds(2f);
+        GameManager.Instance.Step++;
+        GameManager.Instance.Resetstep();
     }
 }

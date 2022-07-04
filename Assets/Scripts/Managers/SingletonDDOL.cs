@@ -10,7 +10,11 @@ public class SingletonDDOL<T> : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         Instance = GetComponent<T>();
-
+        //var obj = FindObjectsOfType<T>();
+        //if(obj.Length > 1)
+        //{
+        //    Destroy(gameObject);
+        //}
         if (ddol)
         {
             Destroy(gameObject);

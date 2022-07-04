@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5316478263949694955}
   - component: {fileID: 2939850542442787643}
   - component: {fileID: -5889892075594333701}
+  - component: {fileID: 6257740710265226503}
   m_Layer: 0
   m_Name: cook2
-  m_TagString: Untagged
+  m_TagString: Coword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,8 +96,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e285acd3f8d115479b6373f10a11337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCorrect: 0
-  coWord: {fileID: 0}
-  pos: {fileID: 0}
-  type: 0
-  canvas: {fileID: 0}
+  coWord: {fileID: 3005706092275236952, guid: 6ec0164751a5ebf43a50da471c05c5f9, type: 3}
+  type: 8
+--- !u!61 &6257740710265226503
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009228719412136317}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.96, y: 1.57}
+    newSize: {x: 3.96, y: 1.57}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.96, y: 1.57}
+  m_EdgeRadius: 0
