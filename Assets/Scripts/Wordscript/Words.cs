@@ -59,7 +59,7 @@ public class Words : MonoBehaviour
         }
         else if (GameManager.Instance.isCorrect == true)
         {
-            print("아니");
+            print("아니"); 
             //GameManager.Instance.currentobj.GetComponent<CoWord>().coWord.SetActive(true);
             StartCoroutine(Nextstep());
             Instantiate(GameManager.Instance.objs[GameManager.Instance.Stage].coobj[GameManager.Instance.Step], transform.position, Quaternion.identity);
@@ -84,8 +84,8 @@ public class Words : MonoBehaviour
     private IEnumerator Nextstep()
     {
         Instantiate(GameManager.Instance.clear, canvas.transform);
-        GameManager.Instance.clear.transform.DOScaleX(1, 1.1f);
-        GameManager.Instance.clear.transform.DOScaleY(1, 1.1f);
+        GameManager.Instance.clear.transform.DOScaleX(100, 1.2f);
+        GameManager.Instance.clear.transform.DOScaleY(100, 1.2f);
         yield return new WaitForSeconds(2f);
         GameManager.Instance.Step++;
         GameManager.Instance.Resetstep();
