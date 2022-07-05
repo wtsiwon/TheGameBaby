@@ -69,7 +69,6 @@ public class GameManager : SingletonDDOL<GameManager>
     public void Resetstep()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Step = 0;
         isCorrect = false;
     }
 }
