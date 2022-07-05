@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class StageData : SingletonDDOL<StageData>
+public class StageData : Singleton<StageData>
 {
     [SerializeField]
     private StageScene[] stagedata;

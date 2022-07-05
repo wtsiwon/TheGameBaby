@@ -4,7 +4,7 @@ public class SingletonDDOL<T> : MonoBehaviour
     where T : MonoBehaviour
 {
     public static T Instance { get; private set; }
-    public static T ddol { get; private set; } = null;
+    public static T DDOL { get; private set; } = null;
 
     private void Awake()
     {
@@ -15,7 +15,7 @@ public class SingletonDDOL<T> : MonoBehaviour
         //{
         //    Destroy(gameObject);
         //}
-        if (ddol)
+        if (DDOL)
         {
             Destroy(gameObject);
             return;
