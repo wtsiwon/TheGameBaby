@@ -14,6 +14,27 @@ public class SelectStage : MonoBehaviour
     private void Start()
     {
         Stage();
+        if(GameManager.Instance.Stage > 0)
+        {
+            stageLock[1].gameObject.SetActive(false);
+        }
+        if (GameManager.Instance.Stage > 1)
+        {
+            stageLock[2].gameObject.SetActive(false);
+        }
+        if (GameManager.Instance.Stage > 2)
+        {
+            stageLock[3].gameObject.SetActive(false);
+        }
+        if (GameManager.Instance.Stage > 3)
+        {
+            stageLock[4].gameObject.SetActive(false);
+        }
+        //if (GameManager.Instance.Stage > 4)
+        //{
+        //    stageLock[5].gameObject.SetActive(false);
+        //}
+
     }
     /// <summary>
     /// 스테이지 버튼들이 모여 있는 함수

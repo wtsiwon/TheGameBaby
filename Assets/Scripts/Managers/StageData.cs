@@ -31,9 +31,12 @@ public class StageData : Singleton<StageData>
     /// <param name="step">´Ü°è</param>
     public void LoadStage(int stageNum, int step)
     {
-        if (stageNum == 0 && step > 2 || stageNum > 0 && step > 4)
+        if (stageNum == 0 && step > 1 || stageNum > 0 && step > 4)
         {
             SceneManager.LoadScene("SelectStage");
+            GameManager.Instance.Step = 0;
+            GameManager.Instance.Stage++;
+            return;
         }
         
         ground.sprite = stagedata[stageNum].ground;
