@@ -63,6 +63,7 @@ public class Words : MonoBehaviour
             //GameManager.Instance.currentobj.GetComponent<CoWord>().coWord.SetActive(true);
             StartCoroutine(Nextstep());
             Instantiate(GameManager.Instance.objs[GameManager.Instance.Stage].coobj[GameManager.Instance.Step], transform.position, Quaternion.identity);
+            GameManager.Instance.draggingobj = null;
         }
         GetComponent<SpriteRenderer>().sortingOrder -= 1;
     }
